@@ -1,0 +1,322 @@
+[
+  {
+    "id": "diag_001",
+    "type": "dialogue",
+    "title": "Susitikimas kavinėje",
+    "topic": "Cafe & Meeting",
+    "audioUrl": "https://firebasestorage.googleapis.com/v0/b/lietuviulearningapp.firebasestorage.app/o/audio%2Fdiag_001.mp3?alt=media&token=65eab209-8ffd-4f50-85db-a2d4f3f3f262",
+    "transcriptLt": "Labas, Toma! Kur tu esi? Aš jau kavinėje. Labas, Minedai! Būsiu už penkių minučių.",
+    "transcriptEn": "Hello, Tomas! Where are you? I'm already at the cafe. Hello, Minedas! I'll be there in five minutes.",
+    "keyVocabulary": [
+      { "lt": "Labas", "en": "Hello" },
+      { "lt": "Kur", "en": "Where" },
+      { "lt": "Kavinėje", "en": "In the cafe" },
+      { "lt": "Penkios minutės", "en": "Five minutes" },
+      { "lt": "Būsiu", "en": "I will be" }
+    ],
+    "questions": [
+      {
+        "id": "q_001_1",
+        "questionText": "Where is Tomas currently waiting?",
+        "options": ["At home", "In the cafe", "On the bus", "At work"],
+        "correctOptionIndex": 1,
+        "explanation": "Tomas says 'Aš jau kavinėje' which translates to 'I am already in the cafe'."
+      },
+      {
+        "id": "q_001_2",
+        "questionText": "When will the other person arrive?",
+        "options": ["In 5 minutes", "In 10 minutes", "Right now", "Tomorrow"],
+        "correctOptionIndex": 0,
+        "explanation": "She responds with 'Būsiu už penkių minučių' (I will be there in five minutes)."
+      }
+    ]
+  },
+  {
+    "id": "diag_002",
+    "type": "dialogue",
+    "title": "Kava išsinešimui",
+    "topic": "Coffee - Standard Order",
+    "audioUrl": "https://firebasestorage.googleapis.com/v0/b/lietuviulearningapp.firebasestorage.app/o/audio%2Fdiag_001.mp3?alt=media&token=65eab209-8ffd-4f50-85db-a2d4f3f3f262",
+    "transcriptLt": "Labas, ar galiu gauti kavos, prašau? Labas! Taip, vietoje ar išsinešimui? Išsinešimui, prašau. Gerai, kokio dydžio? Mažą, ačiū. Gerai, viena sekundė.",
+    "transcriptEn": "Hi, can I get a coffee, please? Hi! Yes, to stay or to go? To go, please. Okay, what size? Small, thank you. Okay, just a second.",
+    "keyVocabulary": [
+      { "lt": "Kava", "en": "Coffee" },
+      { "lt": "Vietoje", "en": "To stay (here)" },
+      { "lt": "Išsinešimui", "en": "To go" },
+      { "lt": "Dydis", "en": "Size" },
+      { "lt": "Maža", "en": "Small" }
+    ],
+    "questions": [
+      {
+        "id": "q_002_1",
+        "questionText": "Does the customer want to drink the coffee at the cafe?",
+        "options": ["Yes, to stay", "No, to go", "He hasn't decided", "He wants to sit outside"],
+        "correctOptionIndex": 1,
+        "explanation": "He asks for 'Išsinešimui, prašau' which means 'To go, please'."
+      },
+      {
+        "id": "q_002_2",
+        "questionText": "What size coffee does he ask for?",
+        "options": ["Large", "Medium", "Small", "Double"],
+        "correctOptionIndex": 2,
+        "explanation": "He orders 'Mažą, ačiū' (Small, thank you)."
+      }
+    ]
+  },
+  {
+    "id": "diag_003",
+    "type": "dialogue",
+    "title": "Didelė juoda kava",
+    "topic": "Coffee - Size & Type Variation",
+    "audioUrl": "https://firebasestorage.googleapis.com/v0/b/lietuviulearningapp.firebasestorage.app/o/audio%2Fdiag_001.mp3?alt=media&token=65eab209-8ffd-4f50-85db-a2d4f3f3f262",
+    "transcriptLt": "Laba diena, prašau vieną juodą kavą. Laba diena. Gersite čia ar išsinešite? Išsinešimui. Didelę ar mažą? Didelę, ačiū. Tuoj bus!",
+    "transcriptEn": "Good day, one black coffee please. Good day. Will you drink here or take away? To go. Large or small? Large, thank you. Coming right up!",
+    "keyVocabulary": [
+      { "lt": "Juoda kava", "en": "Black coffee" },
+      { "lt": "Gersite čia", "en": "Will you drink here" },
+      { "lt": "Didelė", "en": "Large" },
+      { "lt": "Maža", "en": "Small" },
+      { "lt": "Tuoj bus", "en": "Coming right up / Soon" }
+    ],
+    "questions": [
+      {
+        "id": "q_003_1",
+        "questionText": "What specific kind of coffee is ordered?",
+        "options": ["Cappuccino", "Black coffee", "Coffee with milk", "Espresso"],
+        "correctOptionIndex": 1,
+        "explanation": "The customer requests 'vieną juodą kavą' (one black coffee)."
+      },
+      {
+        "id": "q_003_2",
+        "questionText": "Which size does the buyer pick this time?",
+        "options": ["Small", "Medium", "Large", "Extra large"],
+        "correctOptionIndex": 2,
+        "explanation": "He replies with 'Didelę, ačiū' (Large, thank you)."
+      }
+    ]
+  },
+  {
+    "id": "diag_004",
+    "type": "dialogue",
+    "title": "Kava su pienu ryte",
+    "topic": "Coffee - Morning & Milk",
+    "audioUrl": "https://firebasestorage.googleapis.com/v0/b/lietuviulearningapp.firebasestorage.app/o/audio%2Fdiag_001.mp3?alt=media&token=65eab209-8ffd-4f50-85db-a2d4f3f3f262",
+    "transcriptLt": "Labas rytas! Noriu kavos su pienu, prašau. Labas rytas! Ar gersite vietoje? Ne, išsinešimui. Vidutinio dydžio? Taip, vidutinę. Minutėlę!",
+    "transcriptEn": "Good morning! I want a coffee with milk, please. Good morning! Will you drink here? No, to go. Medium size? Yes, medium. One minute!",
+    "keyVocabulary": [
+      { "lt": "Labas rytas", "en": "Good morning" },
+      { "lt": "Kava su pienu", "en": "Coffee with milk" },
+      { "lt": "Noriu", "en": "I want" },
+      { "lt": "Vidutinė", "en": "Medium" },
+      { "lt": "Minutėlę", "en": "Just a minute" }
+    ],
+    "questions": [
+      {
+        "id": "q_004_1",
+        "questionText": "What addition does the customer want in his coffee?",
+        "options": ["Sugar", "Milk", "Syrup", "Ice"],
+        "correctOptionIndex": 1,
+        "explanation": "He asks for 'kavos su pienu' (coffee with milk)."
+      },
+      {
+        "id": "q_004_2",
+        "questionText": "What size coffee does the barista suggest and confirm?",
+        "options": ["Small", "Medium", "Large", "Huge"],
+        "correctOptionIndex": 1,
+        "explanation": "The barista asks 'Vidutinio dydžio?' and he confirms 'Taip, vidutinę' (Yes, medium)."
+      }
+    ]
+  },
+  {
+    "id": "diag_005",
+    "type": "dialogue",
+    "title": "Kava čia, vietoje",
+    "topic": "Coffee - Staying at the Cafe",
+    "audioUrl": "https://firebasestorage.googleapis.com/v0/b/lietuviulearningapp.firebasestorage.app/o/audio%2Fdiag_001.mp3?alt=media&token=65eab209-8ffd-4f50-85db-a2d4f3f3f262",
+    "transcriptLt": "Sveiki, ar galima kapučino? Sveiki, taip! Norite čia ar išsinešti? Norėčiau gerti čia. Mažą ar didelį puodelį? Mažą puodelį, ačiū. Prisėskite, tuoj atnešiu.",
+    "transcriptEn": "Hello, can I have a cappuccino? Hello, yes! Would you like here or to go? I would like to drink here. A small or a large cup? A small cup, thank you. Have a seat, I'll bring it right away.",
+    "keyVocabulary": [
+      { "lt": "Sveiki", "en": "Hello / Greetings" },
+      { "lt": "Kapučino", "en": "Cappuccino" },
+      { "lt": "Gerti čia", "en": "To drink here" },
+      { "lt": "Puodelis", "en": "Cup" },
+      { "lt": "Prisėskite", "en": "Have a seat" }
+    ],
+    "questions": [
+      {
+        "id": "q_005_1",
+        "questionText": "Where will the customer drink his cappuccino?",
+        "options": ["Outside", "In his car", "At the cafe (here)", "At work"],
+        "correctOptionIndex": 2,
+        "explanation": "He says 'Norėčiau gerti čia' (I would like to drink here)."
+      },
+      {
+        "id": "q_005_2",
+        "questionText": "What does the barista tell the customer to do at the end?",
+        "options": ["Pay now", "Have a seat", "Wait at the counter", "Take a napkin"],
+        "correctOptionIndex": 1,
+        "explanation": "She tells him 'Prisėskite, tuoj atnešiu' (Have a seat, I will bring it right away)."
+      }
+    ]
+  },
+  {
+    "id": "diag_006",
+    "type": "dialogue",
+    "title": "Dvi kavos išsinešimui",
+    "topic": "Coffee - Ordering Two Items",
+    "audioUrl": "https://firebasestorage.googleapis.com/v0/b/lietuviulearningapp.firebasestorage.app/o/audio%2Fdiag_001.mp3?alt=media&token=65eab209-8ffd-4f50-85db-a2d4f3f3f262",
+    "transcriptLt": "Labasvakaras! Ar galiu gauti dvi kavas? Sveiki! Taip, čia ar išsinešimui? Dvi juodas kavas išsinešimui, prašau. Kokio dydžio? Dvi dideles. Gerai, minutę!",
+    "transcriptEn": "Good evening! Can I get two coffees? Hello! Yes, here or to go? Two black coffees to go, please. What size? Two large ones. Okay, one minute!",
+    "keyVocabulary": [
+      { "lt": "Labas vakaras", "en": "Good evening" },
+      { "lt": "Dvi kavos", "en": "Two coffees" },
+      { "lt": "Dvi juodos kavos", "en": "Two black coffees" },
+      { "lt": "Didelės", "en": "Large (plural)" },
+      { "lt": "Minutė", "en": "A minute" }
+    ],
+    "questions": [
+      {
+        "id": "q_006_1",
+        "questionText": "How many coffees does the customer order?",
+        "options": ["One", "Two", "Three", "Four"],
+        "correctOptionIndex": 1,
+        "explanation": "He asks for 'dvi kavas' (two coffees)."
+      },
+      {
+        "id": "q_006_2",
+        "questionText": "What greeting is used at the start?",
+        "options": ["Labas rytas", "Laba diena", "Labas vakaras", "Sveiki"],
+        "correctOptionIndex": 2,
+        "explanation": "The conversation opens with 'Labas vakaras!' (Good evening!)."
+      }
+    ]
+  },
+  {
+    "id": "diag_007",
+    "type": "dialogue",
+    "title": "Espreso ir vanduo",
+    "topic": "Coffee - Espresso & Water",
+    "audioUrl": "https://firebasestorage.googleapis.com/v0/b/lietuviulearningapp.firebasestorage.app/o/audio%2Fdiag_001.mp3?alt=media&token=65eab209-8ffd-4f50-85db-a2d4f3f3f262",
+    "transcriptLt": "Laba diena, prašau vieną espreso. Laba diena! Norite čia ar išsinešimui? Gersiu čia. Ar norite stiklinės vandens? Taip, ačiū. Momentą!",
+    "transcriptEn": "Good day, one espresso please. Good day! Would you like here or to go? I'll drink here. Would you like a glass of water? Yes, thank you. Just a moment!",
+    "keyVocabulary": [
+      { "lt": "Espreso", "en": "Espresso" },
+      { "lt": "Gersiu čia", "en": "I will drink here" },
+      { "lt": "Stiklinė vandens", "en": "Glass of water" },
+      { "lt": "Vanduo", "en": "Water" },
+      { "lt": "Momentą", "en": "Just a moment" }
+    ],
+    "questions": [
+      {
+        "id": "q_007_1",
+        "questionText": "What drink option does the barista offer in addition?",
+        "options": ["Milk", "Sugar", "Glass of water", "Cake"],
+        "correctOptionIndex": 2,
+        "explanation": "She asks 'Ar norite stiklinės vandens?' (Would you like a glass of water?)."
+      },
+      {
+        "id": "q_007_2",
+        "questionText": "What type of coffee is ordered?",
+        "options": ["Late", "Espresso", "Kapučino", "Kava su pienu"],
+        "correctOptionIndex": 1,
+        "explanation": "The customer orders 'vieną espreso' (one espresso)."
+      }
+    ]
+  },
+  {
+    "id": "diag_008",
+    "type": "dialogue",
+    "title": "Šalta kava išsinešimui",
+    "topic": "Coffee - Iced Coffee",
+    "audioUrl": "https://firebasestorage.googleapis.com/v0/b/lietuviulearningapp.firebasestorage.app/o/audio%2Fdiag_001.mp3?alt=media&token=65eab209-8ffd-4f50-85db-a2d4f3f3f262",
+    "transcriptLt": "Labas! Ar turite šaltos kavos? Labas! Taip, turime. Ar imsite išsinešimui? Taip, išsinešimui. Didelę ar vidutinę? Vidutinę, prašau. Tuoj paruošiu!",
+    "transcriptEn": "Hi! Do you have iced coffee? Hi! Yes, we do. Will you take it to go? Yes, to go. Large or medium? Medium, please. I'll prepare it right away!",
+    "keyVocabulary": [
+      { "lt": "Šalta kava", "en": "Iced/Cold coffee" },
+      { "lt": "Ar turite?", "en": "Do you have?" },
+      { "lt": "Imsite", "en": "Will you take" },
+      { "lt": "Vidutinė", "en": "Medium" },
+      { "lt": "Tuoj paruošiu", "en": "I'll prepare it right away" }
+    ],
+    "questions": [
+      {
+        "id": "q_008_1",
+        "questionText": "What kind of coffee does the customer ask for?",
+        "options": ["Hot black coffee", "Iced/Cold coffee", "Cappuccino", "Decaf"],
+        "correctOptionIndex": 1,
+        "explanation": "He asks 'Ar turite šaltos kavos?' (Do you have cold/iced coffee?)."
+      },
+      {
+        "id": "q_008_2",
+        "questionText": "What size iced coffee does he choose?",
+        "options": ["Small", "Medium", "Large", "Double"],
+        "correctOptionIndex": 1,
+        "explanation": "He specifies 'Vidutinę, prašau' (Medium, please)."
+      }
+    ]
+  },
+  {
+    "id": "diag_009",
+    "type": "dialogue",
+    "title": "Kava ir cukrus",
+    "topic": "Coffee - Sugar Options",
+    "audioUrl": "https://firebasestorage.googleapis.com/v0/b/lietuviulearningapp.firebasestorage.app/o/audio%2Fdiag_001.mp3?alt=media&token=65eab209-8ffd-4f50-85db-a2d4f3f3f262",
+    "transcriptLt": "Sveiki, prašau vieną mažą kavą. Sveiki! Vietoje ar išsinešti? Išsinešimui. Ar reikės cukraus? Ne, be cukraus, ačiū. Gerai, viena sekundė.",
+    "transcriptEn": "Hello, one small coffee please. Hello! To stay or to go? To go. Will you need sugar? No, without sugar, thank you. Okay, just a second.",
+    "keyVocabulary": [
+      { "lt": "Maža kava", "en": "Small coffee" },
+      { "lt": "Reikės", "en": "Will need" },
+      { "lt": "Cukrus", "en": "Sugar" },
+      { "lt": "Be cukraus", "en": "Without sugar" },
+      { "lt": "Viena sekundė", "en": "One second" }
+    ],
+    "questions": [
+      {
+        "id": "q_009_1",
+        "questionText": "Does the customer want sugar in his coffee?",
+        "options": ["Yes, one spoon", "Yes, two spoons", "No, without sugar", "He doesn't answer"],
+        "correctOptionIndex": 2,
+        "explanation": "He states 'Ne, be cukraus, ačiū' (No, without sugar, thank you)."
+      },
+      {
+        "id": "q_009_2",
+        "questionText": "What Lithuanian phrase means 'without sugar'?",
+        "options": ["Su cukrumi", "Be cukraus", "Su pienu", "Be pieno"],
+        "correctOptionIndex": 1,
+        "explanation": "'Be cukraus' literally translates to 'without sugar'."
+      }
+    ]
+  },
+  {
+    "id": "diag_010",
+    "type": "dialogue",
+    "title": "Mokėjimas už kavą",
+    "topic": "Coffee - Paying by Card",
+    "audioUrl": "https://firebasestorage.googleapis.com/v0/b/lietuviulearningapp.firebasestorage.app/o/audio%2Fdiag_001.mp3?alt=media&token=65eab209-8ffd-4f50-85db-a2d4f3f3f262",
+    "transcriptLt": "Labas, noriu vienos vidutinės kavos išsinešimui. Labas! Gerai, trys eurai. Mokėsite kortele ar grynaisiais? Kortele, prašau. Ačiū, gražios dienos!",
+    "transcriptEn": "Hi, I want one medium coffee to go. Hi! Okay, three euros. Will you pay by card or cash? By card, please. Thank you, have a nice day!",
+    "keyVocabulary": [
+      { "lt": "Trys eurai", "en": "Three euros" },
+      { "lt": "Mokėsite", "en": "You will pay" },
+      { "lt": "Kortelė / Kortele", "en": "Card / By card" },
+      { "lt": "Grynieji / Grynaisiais", "en": "Cash / By cash" },
+      { "lt": "Gražios dienos", "en": "Have a nice day" }
+    ],
+    "questions": [
+      {
+        "id": "q_010_1",
+        "questionText": "How much does the coffee cost?",
+        "options": ["1 euro", "2 euros", "3 euros", "5 euros"],
+        "correctOptionIndex": 2,
+        "explanation": "The barista says 'trys eurai' (three euros)."
+      },
+      {
+        "id": "q_010_2",
+        "questionText": "How does the customer decide to pay?",
+        "options": ["By card", "With cash", "With a phone app", "He forgot his wallet"],
+        "correctOptionIndex": 0,
+        "explanation": "He replies with 'Kortele, prašau' (By card, please)."
+      }
+    ]
+  }
+]

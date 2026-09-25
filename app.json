@@ -1,0 +1,7 @@
+{
+  "name": "LietuviuPracticeApp",
+  "displayName": "LietuviuPracticeApp",
+  "plugins": [
+    "expo-audio"
+  ]
+}
