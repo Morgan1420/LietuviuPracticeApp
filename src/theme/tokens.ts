@@ -13,6 +13,12 @@ export const colors = {
   disabledSurface: '#ECEEF3',
 } as const;
 
+export const difficultyColors = {
+  easy: '#1E9E5A',
+  medium: '#E8890C',
+  hard: '#D14343',
+} as const;
+
 export const spacing = {
   xs: 4,
   sm: 8,

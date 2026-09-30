@@ -1,5 +1,7 @@
 export type ExerciseType = 'dialogue' | 'repeat' | 'qa';
 
+export type Difficulty = 'easy' | 'medium' | 'hard';
+
 /** Index into a DialogueQuestion's 4-option tuple. */
 export type OptionIndex = 0 | 1 | 2 | 3;
 
