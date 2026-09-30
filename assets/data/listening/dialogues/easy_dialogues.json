@@ -1,1 +1,693 @@
-[]
+[
+  {
+    "id": "diag_easy_0001",
+    "type": "dialogue",
+    "title": "Vardas",
+    "topic": "Basics",
+    "audioUrl": "https://example.com/audio/lt/easy/diag_0001.mp3",
+    "transcriptLt": "Labas! Koks tavo vardas? Mano vardas Jonas. O tavo? Mano vardas Lina.",
+    "transcriptEn": "Hi! What is your name? My name is Jonas. And yours? My name is Lina.",
+    "keyVocabulary": [
+      { "lt": "Labas", "en": "Hi / Hello" },
+      { "lt": "Vardas", "en": "Name" },
+      { "lt": "Koks?", "en": "What?" }
+    ],
+    "questions": [
+      {
+        "id": "q_easy_0001_1",
+        "questionText": "What is the man's name?",
+        "options": ["Lina", "Jonas", "Toma", "Tomas"],
+        "correctOptionIndex": 1,
+        "explanation": "He says 'Mano vardas Jonas' (My name is Jonas)."
+      }
+    ]
+  },
+  {
+    "id": "diag_easy_0002",
+    "type": "dialogue",
+    "title": "Kiek tau metų?",
+    "topic": "Age",
+    "audioUrl": "https://example.com/audio/lt/easy/diag_0002.mp3",
+    "transcriptLt": "Labas! Kiek tau metų? Man yra dvidešimt metų. O tau? Man dvidešimt penkeri.",
+    "transcriptEn": "Hi! How old are you? I am twenty years old. And you? I am twenty-five.",
+    "keyVocabulary": [
+      { "lt": "Kiek?", "en": "How many / How old?" },
+      { "lt": "Metai", "en": "Years" },
+      { "lt": "Dvidešimt", "en": "Twenty" }
+    ],
+    "questions": [
+      {
+        "id": "q_easy_0002_1",
+        "questionText": "How old is the first person?",
+        "options": ["10", "20", "25", "30"],
+        "correctOptionIndex": 1,
+        "explanation": "The first person says 'dvidešimt metų' (20 years old)."
+      }
+    ]
+  },
+  {
+    "id": "diag_easy_0003",
+    "type": "dialogue",
+    "title": "Iš kur tu esi?",
+    "topic": "Origin",
+    "audioUrl": "https://example.com/audio/lt/easy/diag_0003.mp3",
+    "transcriptLt": "Labas! Iš kur tu esi? Aš esu iš Lietuvos. O tu? Aš esu iš Ispanijos.",
+    "transcriptEn": "Hi! Where are you from? I am from Lithuania. And you? I am from Spain.",
+    "keyVocabulary": [
+      { "lt": "Iš kur?", "en": "Where from?" },
+      { "lt": "Iš Lietuvos", "en": "From Lithuania" },
+      { "lt": "Iš Ispanijos", "en": "From Spain" }
+    ],
+    "questions": [
+      {
+        "id": "q_easy_0003_1",
+        "questionText": "Where is the first speaker from?",
+        "options": ["Spain", "Lithuania", "England", "France"],
+        "correctOptionIndex": 1,
+        "explanation": "The speaker says 'Aš esu iš Lietuvos' (I am from Lithuania)."
+      }
+    ]
+  },
+  {
+    "id": "diag_easy_0004",
+    "type": "dialogue",
+    "title": "Kaip sekasi?",
+    "topic": "Greetings",
+    "audioUrl": "https://example.com/audio/lt/easy/diag_0004.mp3",
+    "transcriptLt": "Labas! Kaip sekasi? Labai gerai, ačiū! O tau? Aš irgi gerai.",
+    "transcriptEn": "Hi! How are you doing? Very good, thanks! And you? I am also good.",
+    "keyVocabulary": [
+      { "lt": "Kaip sekasi?", "en": "How are you doing?" },
+      { "lt": "Labai gerai", "en": "Very good" },
+      { "lt": "Ačiū", "en": "Thanks" }
+    ],
+    "questions": [
+      {
+        "id": "q_easy_0004_1",
+        "questionText": "How is the speaker feeling?",
+        "options": ["Bad", "Tired", "Very good", "Sad"],
+        "correctOptionIndex": 2,
+        "explanation": "The speaker replies 'Labai gerai, ačiū' (Very good, thanks)."
+      }
+    ]
+  },
+  {
+    "id": "diag_easy_0005",
+    "type": "dialogue",
+    "title": "Kur tu gyveni?",
+    "topic": "City",
+    "audioUrl": "https://example.com/audio/lt/easy/diag_0005.mp3",
+    "transcriptLt": "Labas! Kur tu gyveni? Aš gyvenu Vilniuje. O tu? Aš gyvenu Kaune.",
+    "transcriptEn": "Hi! Where do you live? I live in Vilnius. And you? I live in Kaunas.",
+    "keyVocabulary": [
+      { "lt": "Kur?", "en": "Where?" },
+      { "lt": "Gyvenu", "en": "I live" },
+      { "lt": "Vilniuje", "en": "In Vilnius" }
+    ],
+    "questions": [
+      {
+        "id": "q_easy_0005_1",
+        "questionText": "Where does the first speaker live?",
+        "options": ["Kaunas", "Vilnius", "Klaipėda", "London"],
+        "correctOptionIndex": 1,
+        "explanation": "The speaker answers 'Aš gyvenu Vilniuje' (I live in Vilnius)."
+      }
+    ]
+  },
+  {
+    "id": "diag_easy_0006",
+    "type": "dialogue",
+    "title": "Atsisveikinimas",
+    "topic": "Farewells",
+    "audioUrl": "https://example.com/audio/lt/easy/diag_0006.mp3",
+    "transcriptLt": "Viso gero! Viso gero! Iki rytojaus! Iki!",
+    "transcriptEn": "Goodbye! Goodbye! See you tomorrow! Bye!",
+    "keyVocabulary": [
+      { "lt": "Viso gero", "en": "Goodbye" },
+      { "lt": "Iki rytojaus", "en": "See you tomorrow" },
+      { "lt": "Iki", "en": "Bye" }
+    ],
+    "questions": [
+      {
+        "id": "q_easy_0006_1",
+        "questionText": "When will they see each other again?",
+        "options": ["Today", "Tomorrow", "Next week", "Never"],
+        "correctOptionIndex": 1,
+        "explanation": "'Iki rytojaus' means 'See you tomorrow'."
+      }
+    ]
+  },
+  {
+    "id": "diag_easy_0007",
+    "type": "dialogue",
+    "title": "Kava ar arbata?",
+    "topic": "Preferences",
+    "audioUrl": "https://example.com/audio/lt/easy/diag_0007.mp3",
+    "transcriptLt": "Kava ar arbata? Kava, prašau. Su cukrumi? Ne, be cukraus.",
+    "transcriptEn": "Coffee or tea? Coffee, please. With sugar? No, without sugar.",
+    "keyVocabulary": [
+      { "lt": "Kava", "en": "Coffee" },
+      { "lt": "Arbata", "en": "Tea" },
+      { "lt": "Be cukraus", "en": "Without sugar" }
+    ],
+    "questions": [
+      {
+        "id": "q_easy_0007_1",
+        "questionText": "What drink does the person choose?",
+        "options": ["Tea", "Water", "Coffee", "Juice"],
+        "correctOptionIndex": 2,
+        "explanation": "The person chooses 'Kava, prašau' (Coffee, please)."
+      }
+    ]
+  },
+  {
+    "id": "diag_easy_0008",
+    "type": "dialogue",
+    "title": "Ar kalbi angliškai?",
+    "topic": "Languages",
+    "audioUrl": "https://example.com/audio/lt/easy/diag_0008.mp3",
+    "transcriptLt": "Atsiprašau, ar kalbi angliškai? Taip, kalbu. Puiku, ačiū!",
+    "transcriptEn": "Excuse me, do you speak English? Yes, I do. Great, thank you!",
+    "keyVocabulary": [
+      { "lt": "Atsiprašau", "en": "Excuse me" },
+      { "lt": "Angliškai", "en": "English" },
+      { "lt": "Kalbu", "en": "I speak" }
+    ],
+    "questions": [
+      {
+        "id": "q_easy_0008_1",
+        "questionText": "Does the person speak English?",
+        "options": ["No", "Yes", "A little bit", "Only German"],
+        "correctOptionIndex": 1,
+        "explanation": "The answer is 'Taip, kalbu' (Yes, I speak)."
+      }
+    ]
+  },
+  {
+    "id": "diag_easy_0009",
+    "type": "dialogue",
+    "title": "Taip ar ne?",
+    "topic": "Basics",
+    "audioUrl": "https://example.com/audio/lt/easy/diag_0009.mp3",
+    "transcriptLt": "Ar nori vandens? Taip, prašau. Ar nori maisto? Ne, ačiū.",
+    "transcriptEn": "Do you want water? Yes, please. Do you want food? No, thank you.",
+    "keyVocabulary": [
+      { "lt": "Vanduo", "en": "Water" },
+      { "lt": "Taip", "en": "Yes" },
+      { "lt": "Ne", "en": "No" }
+    ],
+    "questions": [
+      {
+        "id": "q_easy_0009_1",
+        "questionText": "Does the person want food?",
+        "options": ["Yes", "No", "Later", "A little"],
+        "correctOptionIndex": 1,
+        "explanation": "The answer is 'Ne, ačiū' (No, thank you)."
+      }
+    ]
+  },
+  {
+    "id": "diag_easy_0010",
+    "type": "dialogue",
+    "title": "Šuo ar katė?",
+    "topic": "Pets",
+    "audioUrl": "https://example.com/audio/lt/easy/diag_0010.mp3",
+    "transcriptLt": "Ar turi augintinį? Taip, turiu šunį. O tu? Aš turiu katę.",
+    "transcriptEn": "Do you have a pet? Yes, I have a dog. And you? I have a cat.",
+    "keyVocabulary": [
+      { "lt": "Šuo", "en": "Dog" },
+      { "lt": "Katė", "en": "Cat" },
+      { "lt": "Turiu", "en": "I have" }
+    ],
+    "questions": [
+      {
+        "id": "q_easy_0010_1",
+        "questionText": "What pet does the first speaker have?",
+        "options": ["Cat", "Dog", "Fish", "Bird"],
+        "correctOptionIndex": 1,
+        "explanation": "The speaker says 'Turiu šunį' (I have a dog)."
+      }
+    ]
+  },
+  {
+    "id": "diag_easy_0011",
+    "type": "dialogue",
+    "title": "Kokia šiandien diena?",
+    "topic": "Days",
+    "audioUrl": "https://example.com/audio/lt/easy/diag_0011.mp3",
+    "transcriptLt": "Kokia šiandien diena? Šiandien yra pirmadienis. Ačiū!",
+    "transcriptEn": "What day is today? Today is Monday. Thank you!",
+    "keyVocabulary": [
+      { "lt": "Šiandien", "en": "Today" },
+      { "lt": "Diena", "en": "Day" },
+      { "lt": "Pirmadienis", "en": "Monday" }
+    ],
+    "questions": [
+      {
+        "id": "q_easy_0011_1",
+        "questionText": "What day is today?",
+        "options": ["Tuesday", "Friday", "Monday", "Sunday"],
+        "correctOptionIndex": 2,
+        "explanation": "'Pirmadienis' means Monday."
+      }
+    ]
+  },
+  {
+    "id": "diag_easy_0012",
+    "type": "dialogue",
+    "title": "Kiek dabar valandų?",
+    "topic": "Time",
+    "audioUrl": "https://example.com/audio/lt/easy/diag_0012.mp3",
+    "transcriptLt": "Atsiprašau, kiek dabar valandų? Dabar yra pirma valanda. Ačiū!",
+    "transcriptEn": "Excuse me, what time is it? It is one o'clock now. Thank you!",
+    "keyVocabulary": [
+      { "lt": "Kiek valandų?", "en": "What time is it?" },
+      { "lt": "Dabar", "en": "Now" },
+      { "lt": "Pirma valanda", "en": "One o'clock" }
+    ],
+    "questions": [
+      {
+        "id": "q_easy_0012_1",
+        "questionText": "What time is it?",
+        "options": ["1 o'clock", "2 o'clock", "5 o'clock", "12 o'clock"],
+        "correctOptionIndex": 0,
+        "explanation": "'Pirma valanda' means one o'clock."
+      }
+    ]
+  },
+  {
+    "id": "diag_easy_0013",
+    "type": "dialogue",
+    "title": "Kur yra stotelė?",
+    "topic": "Directions",
+    "audioUrl": "https://example.com/audio/lt/easy/diag_0013.mp3",
+    "transcriptLt": "Atsiprašau, kur yra stotelė? Stotelė yra čia. Ačiū labai!",
+    "transcriptEn": "Excuse me, where is the bus stop? The stop is here. Thank you very much!",
+    "keyVocabulary": [
+      { "lt": "Kur?", "en": "Where?" },
+      { "lt": "Stotelė", "en": "Bus stop" },
+      { "lt": "Čia", "en": "Here" }
+    ],
+    "questions": [
+      {
+        "id": "q_easy_0013_1",
+        "questionText": "Where is the bus stop?",
+        "options": ["There", "Here", "Far away", "Left"],
+        "correctOptionIndex": 1,
+        "explanation": "The answer given is 'Čia' (Here)."
+      }
+    ]
+  },
+  {
+    "id": "diag_easy_0014",
+    "type": "dialogue",
+    "title": "Mano brolis",
+    "topic": "Family",
+    "audioUrl": "https://example.com/audio/lt/easy/diag_0014.mp3",
+    "transcriptLt": "Ar turi brolį? Taip, turiu vieną brolį. O seserį? Ne, neturiu.",
+    "transcriptEn": "Do you have a brother? Yes, I have one brother. And a sister? No, I don't.",
+    "keyVocabulary": [
+      { "lt": "Brolis", "en": "Brother" },
+      { "lt": "Sesuo", "en": "Sister" },
+      { "lt": "Neturiu", "en": "I don't have" }
+    ],
+    "questions": [
+      {
+        "id": "q_easy_0014_1",
+        "questionText": "Does the person have a sister?",
+        "options": ["Yes", "No", "Two sisters", "One sister"],
+        "correctOptionIndex": 1,
+        "explanation": "The person says 'Ne, neturiu' (No, I don't)."
+      }
+    ]
+  },
+  {
+    "id": "diag_easy_0015",
+    "type": "dialogue",
+    "title": "Kiek kainuoja?",
+    "topic": "Shopping",
+    "audioUrl": "https://example.com/audio/lt/easy/diag_0015.mp3",
+    "transcriptLt": "Sveiki! Kiek kainuoja kava? Kava kainuoja du eurus. Prašau. Ačiū!",
+    "transcriptEn": "Hello! How much is the coffee? Coffee costs two euros. Here you go. Thank you!",
+    "keyVocabulary": [
+      { "lt": "Kiek kainuoja?", "en": "How much does it cost?" },
+      { "lt": "Du eurų", "en": "Two euros" },
+      { "lt": "Prašau", "en": "Here you go / Please" }
+    ],
+    "questions": [
+      {
+        "id": "q_easy_0015_1",
+        "questionText": "How much is the coffee?",
+        "options": ["1 euro", "2 euros", "3 euros", "5 euros"],
+        "correctOptionIndex": 1,
+        "explanation": "The price is 'du eurus' (two euros)."
+      }
+    ]
+  },
+  {
+    "id": "diag_easy_0016",
+    "type": "dialogue",
+    "title": "Šilta ar šalta?",
+    "topic": "Weather",
+    "audioUrl": "https://example.com/audio/lt/easy/diag_0016.mp3",
+    "transcriptLt": "Ar šiandien šilta? Ne, šiandien labai šalta. Taip, tiesa.",
+    "transcriptEn": "Is it warm today? No, today it is very cold. Yes, true.",
+    "keyVocabulary": [
+      { "lt": "Šilta", "en": "Warm" },
+      { "lt": "Šalta", "en": "Cold" },
+      { "lt": "Šiandien", "en": "Today" }
+    ],
+    "questions": [
+      {
+        "id": "q_easy_0016_1",
+        "questionText": "How is the weather today?",
+        "options": ["Warm", "Hot", "Very cold", "Raining"],
+        "correctOptionIndex": 2,
+        "explanation": "The speaker says 'labai šalta' (very cold)."
+      }
+    ]
+  },
+  {
+    "id": "diag_easy_0017",
+    "type": "dialogue",
+    "title": "Ką veiki?",
+    "topic": "Activities",
+    "audioUrl": "https://example.com/audio/lt/easy/diag_0017.mp3",
+    "transcriptLt": "Labas! Ką veiki? Aš dirbu. O tu? Aš ilsiuosi.",
+    "transcriptEn": "Hi! What are you doing? I am working. And you? I am resting.",
+    "keyVocabulary": [
+      { "lt": "Ką veiki?", "en": "What are you doing?" },
+      { "lt": "Dirbu", "en": "I work / I'm working" },
+      { "lt": "Ilsiuosi", "en": "I'm resting" }
+    ],
+    "questions": [
+      {
+        "id": "q_easy_0017_1",
+        "questionText": "What is the second person doing?",
+        "options": ["Working", "Resting", "Sleeping", "Eating"],
+        "correctOptionIndex": 1,
+        "explanation": "The second person says 'Aš ilsiuosi' (I am resting)."
+      }
+    ]
+  },
+  {
+    "id": "diag_easy_0018",
+    "type": "dialogue",
+    "title": "Ačiū ir prašom",
+    "topic": "Politeness",
+    "audioUrl": "https://example.com/audio/lt/easy/diag_0018.mp3",
+    "transcriptLt": "Ačiū labai už pagalbą! Nėra už ką! Gražios dienos! Tev taip pat!",
+    "transcriptEn": "Thank you very much for the help! You're welcome! Have a nice day! You too!",
+    "keyVocabulary": [
+      { "lt": "Ačiū labai", "en": "Thank you very much" },
+      { "lt": "Nėra už ką", "en": "You're welcome" },
+      { "lt": "Tev taip pat", "en": "You too" }
+    ],
+    "questions": [
+      {
+        "id": "q_easy_0018_1",
+        "questionText": "What does 'Nėra už ką' mean?",
+        "options": ["Thank you", "You're welcome", "Goodbye", "Please"],
+        "correctOptionIndex": 1,
+        "explanation": "'Nėra už ką' means 'You're welcome'."
+      }
+    ]
+  },
+  {
+    "id": "diag_easy_0019",
+    "type": "dialogue",
+    "title": "Mėgstama spalva",
+    "topic": "Colors",
+    "audioUrl": "https://example.com/audio/lt/easy/diag_0019.mp3",
+    "transcriptLt": "Kokia tavo mėgstama spalva? Mano mėgstama spalva yra mėlyna. O tavo? Raudona.",
+    "transcriptEn": "What is your favorite color? My favorite color is blue. And yours? Red.",
+    "keyVocabulary": [
+      { "lt": "Spalva", "en": "Color" },
+      { "lt": "Mėlyna", "en": "Blue" },
+      { "lt": "Raudona", "en": "Red" }
+    ],
+    "questions": [
+      {
+        "id": "q_easy_0019_1",
+        "questionText": "What is the first speaker's favorite color?",
+        "options": ["Red", "Green", "Blue", "Yellow"],
+        "correctOptionIndex": 2,
+        "explanation": "The speaker says 'mėlyna' (blue)."
+      }
+    ]
+  },
+  {
+    "id": "diag_easy_0020",
+    "type": "dialogue",
+    "title": "Ar nori arbatos?",
+    "topic": "Offers",
+    "audioUrl": "https://example.com/audio/lt/easy/diag_0020.mp3",
+    "transcriptLt": "Labas! Ar nori arbatos? Taip, noriu. Ačiū! Prašom.",
+    "transcriptEn": "Hi! Do you want tea? Yes, I do. Thank you! You're welcome.",
+    "keyVocabulary": [
+      { "lt": "Nori", "en": "You want" },
+      { "lt": "Arbata", "en": "Tea" },
+      { "lt": "Noriu", "en": "I want" }
+    ],
+    "questions": [
+      {
+        "id": "q_easy_0020_1",
+        "questionText": "Does the guest want tea?",
+        "options": ["Yes", "No", "Wants coffee", "Wants water"],
+        "correctOptionIndex": 0,
+        "explanation": "The guest answers 'Taip, noriu' (Yes, I want)."
+      }
+    ]
+  },
+  {
+    "id": "diag_easy_0021",
+    "type": "dialogue",
+    "title": "Kur yra tualetas?",
+    "topic": "Basics",
+    "audioUrl": "https://example.com/audio/lt/easy/diag_0021.mp3",
+    "transcriptLt": "Atsiprašau, kur yra tualetas? Tualetas yra ten. Ačiū!",
+    "transcriptEn": "Excuse me, where is the toilet? The toilet is over there. Thank you!",
+    "keyVocabulary": [
+      { "lt": "Tualetas", "en": "Toilet / Restroom" },
+      { "lt": "Ten", "en": "There / Over there" },
+      { "lt": "Atsiprašau", "en": "Excuse me" }
+    ],
+    "questions": [
+      {
+        "id": "q_easy_0021_1",
+        "questionText": "Where is the toilet?",
+        "options": ["Here", "Over there", "Left", "Right"],
+        "correctOptionIndex": 1,
+        "explanation": "The response is 'Ten' (Over there)."
+      }
+    ]
+  },
+  {
+    "id": "diag_easy_0022",
+    "type": "dialogue",
+    "title": "Labas rytas",
+    "topic": "Greetings",
+    "audioUrl": "https://example.com/audio/lt/easy/diag_0022.mp3",
+    "transcriptLt": "Labas rytas! Labas rytas! Gera diena šiandien. Taip, labai graži!",
+    "transcriptEn": "Good morning! Good morning! Good day today. Yes, very beautiful!",
+    "keyVocabulary": [
+      { "lt": "Labas rytas", "en": "Good morning" },
+      { "lt": "Gera diena", "en": "Good day" },
+      { "lt": "Graži", "en": "Beautiful" }
+    ],
+    "questions": [
+      {
+        "id": "q_easy_0022_1",
+        "questionText": "Which greeting is used here?",
+        "options": ["Good evening", "Good morning", "Good night", "Goodbye"],
+        "correctOptionIndex": 1,
+        "explanation": "'Labas rytas' means Good morning."
+      }
+    ]
+  },
+  {
+    "id": "diag_easy_0023",
+    "type": "dialogue",
+    "title": "Labas vakaras",
+    "topic": "Greetings",
+    "audioUrl": "https://example.com/audio/lt/easy/diag_0023.mp3",
+    "transcriptLt": "Labas vakaras! Sveiki! Kaip laikotės? Gerai, ačiū.",
+    "transcriptEn": "Good evening! Hello! How are you? Good, thank you.",
+    "keyVocabulary": [
+      { "lt": "Labas vakaras", "en": "Good evening" },
+      { "lt": "Sveiki", "en": "Hello (formal/plural)" },
+      { "lt": "Kaip laikotės?", "en": "How are you?" }
+    ],
+    "questions": [
+      {
+        "id": "q_easy_0023_1",
+        "questionText": "What time of day is this greeting used?",
+        "options": ["Morning", "Afternoon", "Evening", "Night"],
+        "correctOptionIndex": 2,
+        "explanation": "'Labas vakaras' means Good evening."
+      }
+    ]
+  },
+  {
+    "id": "diag_easy_0024",
+    "type": "dialogue",
+    "title": "Mano vardas Tomas",
+    "topic": "Introductions",
+    "audioUrl": "https://example.com/audio/lt/easy/diag_0024.mp3",
+    "transcriptLt": "Sveiki, aš esu Tomas. Malonu! Aš esu Rūta. Malonu susipažinti!",
+    "transcriptEn": "Hello, I am Tomas. Nice to meet you! I am Rūta. Nice to meet you!",
+    "keyVocabulary": [
+      { "lt": "Aš esu", "en": "I am" },
+      { "lt": "Malonu", "en": "Nice / Pleasant" },
+      { "lt": "Susipažinti", "en": "To meet" }
+    ],
+    "questions": [
+      {
+        "id": "q_easy_0024_1",
+        "questionText": "What is the woman's name?",
+        "options": ["Lina", "Toma", "Rūta", "Ieva"],
+        "correctOptionIndex": 2,
+        "explanation": "She says 'Aš esu Rūta' (I am Rūta)."
+      }
+    ]
+  },
+  {
+    "id": "diag_easy_0025",
+    "type": "dialogue",
+    "title": "Taip, aš studijuoju",
+    "topic": "Studies",
+    "audioUrl": "https://example.com/audio/lt/easy/diag_0025.mp3",
+    "transcriptLt": "Ar tu dirbi? Ne, aš studijuoju. O tu? Aš dirbu.",
+    "transcriptEn": "Do you work? No, I study. And you? I work.",
+    "keyVocabulary": [
+      { "lt": "Dirbi", "en": "You work" },
+      { "lt": "Studijuoju", "en": "I study" },
+      { "lt": "Dirbu", "en": "I work" }
+    ],
+    "questions": [
+      {
+        "id": "q_easy_0025_1",
+        "questionText": "Does the first person work?",
+        "options": ["Yes", "No, studies", "Both", "Retired"],
+        "correctOptionIndex": 1,
+        "explanation": "The person says 'Ne, aš studijuoju' (No, I study)."
+      }
+    ]
+  },
+  {
+    "id": "diag_easy_0026",
+    "type": "dialogue",
+    "title": "Skanus maistas",
+    "topic": "Food",
+    "audioUrl": "https://example.com/audio/lt/easy/diag_0026.mp3",
+    "transcriptLt": "Ar skanu? Taip, labai skanu! Ačiū. Prašom!",
+    "transcriptEn": "Is it delicious? Yes, very delicious! Thank you. You're welcome!",
+    "keyVocabulary": [
+      { "lt": "Skanu", "en": "Tasty / Delicious" },
+      { "lt": "Labai skanu", "en": "Very delicious" },
+      { "lt": "Prašom", "en": "You're welcome" }
+    ],
+    "questions": [
+      {
+        "id": "q_easy_0026_1",
+        "questionText": "Is the food good?",
+        "options": ["Bad", "Ok", "Very delicious", "Too salty"],
+        "correctOptionIndex": 2,
+        "explanation": "The speaker says 'Labai skanu!' (Very delicious!)."
+      }
+    ]
+  },
+  {
+    "id": "diag_easy_0027",
+    "type": "dialogue",
+    "title": "Ar turi automobilį?",
+    "topic": "Transport",
+    "audioUrl": "https://example.com/audio/lt/easy/diag_0027.mp3",
+    "transcriptLt": "Ar turi automobilį? Ne, neturiu. Aš važiuoju autobusu. Supratau.",
+    "transcriptEn": "Do you have a car? No, I don't. I ride the bus. I understand.",
+    "keyVocabulary": [
+      { "lt": "Automobilis", "en": "Car" },
+      { "lt": "Autobusas", "en": "Bus" },
+      { "lt": "Supratau", "en": "I see / I understand" }
+    ],
+    "questions": [
+      {
+        "id": "q_easy_0027_1",
+        "questionText": "How does the person travel?",
+        "options": ["By car", "By bus", "On foot", "By train"],
+        "correctOptionIndex": 1,
+        "explanation": "The person says 'Aš važiuoju autobusu' (I ride the bus)."
+      }
+    ]
+  },
+  {
+    "id": "diag_easy_0028",
+    "type": "dialogue",
+    "title": "Koks tavo telefono numeris?",
+    "topic": "Numbers",
+    "audioUrl": "https://example.com/audio/lt/easy/diag_0028.mp3",
+    "transcriptLt": "Koks tavo telefono numeris? Mano numeris yra vienas du trys. Ačiū!",
+    "transcriptEn": "What is your phone number? My number is one two three. Thank you!",
+    "keyVocabulary": [
+      { "lt": "Telefono numeris", "en": "Phone number" },
+      { "lt": "Vienas", "en": "One" },
+      { "lt": "Du", "en": "Two" },
+      { "lt": "Trys", "en": "Three" }
+    ],
+    "questions": [
+      {
+        "id": "q_easy_0028_1",
+        "questionText": "What digits are mentioned in the phone number?",
+        "options": ["1 2 3", "4 5 6", "7 8 9", "0 0 0"],
+        "correctOptionIndex": 0,
+        "explanation": "'Vienas du trys' means 1 2 3."
+      }
+    ]
+  },
+  {
+    "id": "diag_easy_0029",
+    "type": "dialogue",
+    "title": "Pagalba",
+    "topic": "Basics",
+    "audioUrl": "https://example.com/audio/lt/easy/diag_0029.mp3",
+    "transcriptLt": "Ar gali man padėti? Taip, žinoma! Kuo galiu padėti?",
+    "transcriptEn": "Can you help me? Yes, of course! How can I help?",
+    "keyVocabulary": [
+      { "lt": "Padėti", "en": "To help" },
+      { "lt": "Žinoma", "en": "Of course" },
+      { "lt": "Galiu", "en": "I can" }
+    ],
+    "questions": [
+      {
+        "id": "q_easy_0029_1",
+        "questionText": "Does the person agree to help?",
+        "options": ["No", "Yes, of course", "Maybe", "Later"],
+        "correctOptionIndex": 1,
+        "explanation": "The person replies 'Taip, žinoma!' (Yes, of course!)."
+      }
+    ]
+  },
+  {
+    "id": "diag_easy_0030",
+    "type": "dialogue",
+    "title": "Iki pasimatymo!",
+    "topic": "Farewells",
+    "audioUrl": "https://example.com/audio/lt/easy/diag_0030.mp3",
+    "transcriptLt": "Iki pasimatymo! Iki! Geros dienos! Tev taip pat!",
+    "transcriptEn": "See you later! Bye! Have a good day! You too!",
+    "keyVocabulary": [
+      { "lt": "Iki pasimatymo", "en": "See you later / Goodbye" },
+      { "lt": "Geros dienos", "en": "Have a good day" },
+      { "lt": "Tev taip pat", "en": "You too" }
+    ],
+    "questions": [
+      {
+        "id": "q_easy_0030_1",
+        "questionText": "What does 'Iki pasimatymo!' mean?",
+        "options": ["Good morning", "See you later", "Thank you", "Excuse me"],
+        "correctOptionIndex": 1,
+        "explanation": "'Iki pasimatymo!' translates to 'See you later' or 'Goodbye'."
+      }
+    ]
+  }
+]

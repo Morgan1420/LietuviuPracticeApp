@@ -17,21 +17,39 @@ jest.mock(
   () => require('react-native-safe-area-context/jest/mock').default,
 );
 
-jest.mock('expo-audio', () => ({
-  setAudioModeAsync: jest.fn(() => Promise.resolve()),
-  useAudioPlayer: jest.fn(() => ({
+// Caching is covered in audioCache.test.ts; here audio plays from the remote URL.
+jest.mock('../src/audio/audioCache', () => ({
+  getCachedAudioUri: (url: string) => Promise.resolve(url),
+  peekCachedAudioUri: (url: string) => url,
+  prefetchAudio: jest.fn(),
+}));
+
+jest.mock('expo-audio', () => {
+  const { useRef } = require('react');
+  const STATUS = { isLoaded: true, playing: false, duration: 65, currentTime: 12, didJustFinish: false };
+  const makePlayer = () => ({
+    currentStatus: STATUS,
+    addListener: () => ({ remove: () => undefined }),
     play: jest.fn(),
     pause: jest.fn(),
+    replace: jest.fn(),
     seekTo: jest.fn(() => Promise.resolve()),
     setPlaybackRate: jest.fn(),
-  })),
-  useAudioPlayerStatus: jest.fn(() => ({
-    isLoaded: true,
-    playing: false,
-    duration: 65,
-    currentTime: 12,
-  })),
-}));
+    setActiveForLockScreen: jest.fn(),
+    updateLockScreenMetadata: jest.fn(),
+  });
+  return {
+    setAudioModeAsync: jest.fn(() => Promise.resolve()),
+    // One stable player per component, like the real hook.
+    useAudioPlayer: () => {
+      const player = useRef(null);
+      if (player.current === null) {
+        player.current = makePlayer();
+      }
+      return player.current;
+    },
+  };
+});
 
 const DIFFICULTY_LABEL: Record<Difficulty, string> = { easy: 'Easy', medium: 'Medium', hard: 'Hard' };
 
@@ -169,6 +187,11 @@ test('Drops shows the Lithuanian transcript, English on demand, and the timer', 
   }
   expect(hasText(renderer, drop.lines[0].lt)).toBe(true);
   expect(hasText(renderer, drop.lines[0].en)).toBe(false);
+
+  // Auto-play starts with the chime; Play skips straight to the drop.
+  expect(hasText(renderer, '🔔 Starting…')).toBe(true);
+  await press(renderer, '▶ Play');
+  expect(hasText(renderer, '🔔 Starting…')).toBe(false);
   expect(hasText(renderer, '0:12')).toBe(true);
   expect(hasText(renderer, '1:05')).toBe(true);
 

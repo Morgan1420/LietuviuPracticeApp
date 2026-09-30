@@ -1,33 +1,35 @@
 import React, { useCallback } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { ExerciseLoadResult } from '../data/loadExercises';
-import { useExerciseQueue } from '../hooks/useExerciseQueue';
+import { ExerciseQueue } from '../hooks/useExerciseQueue';
 import { colors, fontSize, radius, spacing } from '../theme/tokens';
 import { MenuButton } from './MenuButton';
 
 interface ExerciseQueueViewProps<T extends { id: string }> {
   result: ExerciseLoadResult<T>;
+  /** Created by the screen with useExerciseQueue(loadedExercises(result)). */
+  queue: ExerciseQueue<T>;
   /** Plural noun for messages, e.g. "dialogues". */
   itemsLabel: string;
   /** Singular noun for the progress line, e.g. "Dialogue". */
   itemLabel: string;
   difficultyLabel: string;
   onBack: () => void;
-  renderItem: (item: T, onNext: () => void) => React.ReactElement;
+  /** `upcoming` is the next item in the queue (e.g. to prefetch its audio). */
+  renderItem: (item: T, onNext: () => void, upcoming: T | undefined) => React.ReactElement;
   /** Extra content on the finished card, e.g. a score summary. */
   finishedSummary?: React.ReactNode;
   /** Called when the user starts the set again, e.g. to reset a score. */
   onRestart?: () => void;
 }
 
-const EMPTY_ITEMS: never[] = [];
-
 /**
- * Shared shell for listening exercise screens: serves the loaded exercises in
- * random order and handles the error, empty and finished states.
+ * Shared shell for listening exercise screens: renders the current item of a
+ * (shuffled) queue and handles the error, empty and finished states.
  */
 export const ExerciseQueueView = <T extends { id: string }>({
   result,
+  queue,
   itemsLabel,
   itemLabel,
   difficultyLabel,
@@ -36,7 +38,6 @@ export const ExerciseQueueView = <T extends { id: string }>({
   finishedSummary,
   onRestart,
 }: ExerciseQueueViewProps<T>): React.ReactElement => {
-  const queue = useExerciseQueue<T>(result.ok ? result.exercises : EMPTY_ITEMS);
   const { restart } = queue;
 
   const handleRestart = useCallback((): void => {
@@ -75,7 +76,9 @@ export const ExerciseQueueView = <T extends { id: string }>({
       <Text style={styles.progress}>
         {itemLabel} {queue.position + 1} of {queue.total}
       </Text>
-      <React.Fragment key={queue.current.id}>{renderItem(queue.current, queue.advance)}</React.Fragment>
+      <React.Fragment key={queue.current.id}>
+        {renderItem(queue.current, queue.advance, queue.upcoming)}
+      </React.Fragment>
     </>
   );
 };

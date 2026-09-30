@@ -1,6 +1,9 @@
 import { useCallback, useEffect } from 'react';
-import { setAudioModeAsync, useAudioPlayer, useAudioPlayerStatus } from 'expo-audio';
+import { useAudioPlayer } from 'expo-audio';
+import { configureAudioMode } from '../audio/audioMode';
 import { resolveAudioSource } from '../audio/resolveAudioSource';
+import { useCachedAudioUri } from './useCachedAudioUri';
+import { usePlayerStatus } from './usePlayerStatus';
 
 export type PlaybackRate = 0.75 | 1.0;
 
@@ -11,6 +14,8 @@ export interface ExerciseAudio {
   currentTime: number;
   /** Seconds; 0 until the clip has loaded. */
   duration: number;
+  /** True on the status update where playback reached the end. */
+  didJustFinish: boolean;
   play: () => Promise<void>;
   pause: () => void;
   replay: (rate: PlaybackRate) => Promise<void>;
@@ -21,17 +26,17 @@ export interface ExerciseAudio {
 const END_TOLERANCE_SECONDS = 0.1;
 
 /**
- * Wraps expo-audio for a single exercise clip. useAudioPlayer releases the
- * native player (and its listeners) on unmount or when audioUrl changes.
+ * Wraps expo-audio for a single exercise clip, played from the disk cache
+ * (see audioCache). useAudioPlayer releases the native player (and its
+ * listeners) on unmount or when the source changes.
  */
 export const useExerciseAudio = (audioUrl: string): ExerciseAudio => {
-  const player = useAudioPlayer(resolveAudioSource(audioUrl));
-  const status = useAudioPlayerStatus(player);
+  const playableUri = useCachedAudioUri(audioUrl);
+  const player = useAudioPlayer(resolveAudioSource(playableUri));
+  const status = usePlayerStatus(player);
 
   useEffect(() => {
-    setAudioModeAsync({ playsInSilentMode: true }).catch((error: unknown) => {
-      console.error('[AudioPlayback Error]: failed to set audio mode', error);
-    });
+    configureAudioMode({ background: false });
   }, []);
 
   const setRate = useCallback(
@@ -92,6 +97,7 @@ export const useExerciseAudio = (audioUrl: string): ExerciseAudio => {
     isPlaying: status.playing,
     currentTime: status.currentTime,
     duration: status.duration,
+    didJustFinish: status.didJustFinish,
     play,
     pause,
     replay,

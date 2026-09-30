@@ -3,6 +3,8 @@ import { shuffle } from '../utils/shuffle';
 
 export interface ExerciseQueue<T> {
   current: T | undefined;
+  /** The item after `current`, if any. */
+  upcoming: T | undefined;
   /** 0-based position of `current`; equals `total` once the queue is finished. */
   position: number;
   total: number;
@@ -25,6 +27,7 @@ export const useExerciseQueue = <T>(items: readonly T[]): ExerciseQueue<T> => {
 
   return {
     current: position < order.length ? order[position] : undefined,
+    upcoming: position + 1 < order.length ? order[position + 1] : undefined,
     position,
     total: order.length,
     advance,

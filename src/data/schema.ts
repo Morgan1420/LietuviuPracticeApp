@@ -47,9 +47,39 @@ export const parseOptions = (value: unknown, path: string): DialogueOptions => {
   return [a, b, c, d];
 };
 
-/** Parses a top-level JSON array, prefixing error paths with the file name. */
+/** An item whose audio isn't recorded yet: `audioUrl` missing or blank. */
+const isMissingAudio = (item: unknown): boolean => {
+  if (!isRecord(item)) {
+    return false;
+  }
+  const { audioUrl } = item;
+  return typeof audioUrl === 'string' ? audioUrl.trim() === '' : audioUrl === undefined || audioUrl === null;
+};
+
+/**
+ * Parses a top-level JSON array, prefixing error paths with the file name.
+ * Items without audio yet are skipped (with a warning) so the rest of the
+ * file stays usable; any other invalid field still fails the whole file.
+ */
 export const parseList = <T>(
   raw: unknown,
   fileName: string,
   parseItem: (value: unknown, path: string) => T,
-): T[] => readArray(raw, fileName).map((item, i) => parseItem(item, `${fileName}[${i}]`));
+): T[] => {
+  const parsed: T[] = [];
+  const skippedIds: string[] = [];
+  readArray(raw, fileName).forEach((item, i) => {
+    if (isMissingAudio(item)) {
+      const id = isRecord(item) && typeof item.id === 'string' ? item.id : `#${i}`;
+      skippedIds.push(id);
+      return;
+    }
+    parsed.push(parseItem(item, `${fileName}[${i}]`));
+  });
+  if (skippedIds.length > 0) {
+    console.warn(
+      `[ExerciseData Warning]: ${fileName}: skipped ${skippedIds.length} item(s) without audio: ${skippedIds.join(', ')}`,
+    );
+  }
+  return parsed;
+};

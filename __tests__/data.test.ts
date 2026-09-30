@@ -2,6 +2,7 @@ import { Difficulty } from '../types/exercises';
 import { loadDialogues } from '../src/data/loadDialogues';
 import { loadDrops } from '../src/data/loadDrops';
 import { loadNumbers } from '../src/data/loadNumbers';
+import { parseDropExercises } from '../src/data/parseDropExercises';
 import { parseNumberExercises } from '../src/data/parseNumberExercises';
 import { formatTime } from '../src/utils/formatTime';
 import { isSameNumber } from '../src/utils/normalizeNumber';
@@ -37,6 +38,30 @@ test('easy numbers require multiple-choice options', () => {
       { requireChoices: true },
     ),
   ).toThrow('easy_numbers.json[0].choices.options[0]');
+});
+
+test('items without audio are skipped; the rest of the file still loads', () => {
+  const warn = jest.spyOn(console, 'warn').mockImplementation(() => undefined);
+  const drop = (id: string, audioUrl?: string | null) => ({
+    id,
+    type: 'drop',
+    title: 'T',
+    topic: 'T',
+    audioUrl,
+    lines: [{ lt: 'Labas', en: 'Hi' }],
+  });
+  const parsed = parseDropExercises(
+    [drop('ok', 'https://example.com/a.mp3'), drop('blank', '  '), drop('missing'), drop('null', null)],
+    'test_drops.json',
+  );
+  expect(parsed.map(d => d.id)).toEqual(['ok']);
+  expect(warn).toHaveBeenCalledWith(expect.stringContaining('skipped 3 item(s) without audio: blank, missing, null'));
+
+  // Other invalid fields still fail loudly.
+  expect(() => parseDropExercises([{ ...drop('bad', 'https://x/y.mp3'), lines: [] }], 'test_drops.json')).toThrow(
+    'test_drops.json[0].lines',
+  );
+  warn.mockRestore();
 });
 
 test('isSameNumber compares digits only', () => {

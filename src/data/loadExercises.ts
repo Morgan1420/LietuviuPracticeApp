@@ -20,3 +20,9 @@ export const loadExercises = <T>(
 
 export const listeningFileName = (difficulty: Difficulty, mode: string): string =>
   `${difficulty}_${mode}.json`;
+
+const NO_EXERCISES: never[] = [];
+
+/** The exercises of a load result, or a stable empty list if loading failed. */
+export const loadedExercises = <T>(result: ExerciseLoadResult<T>): readonly T[] =>
+  result.ok ? result.exercises : NO_EXERCISES;

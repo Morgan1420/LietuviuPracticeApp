@@ -1,7 +1,8 @@
 import { AudioSource } from 'expo-audio';
 
 /**
- * Maps the audioUrl stored in exercise JSON to a playable source, so
- * components never hardcode audio paths.
+ * Maps a playable URI (remote URL or cached file:// URI) to an expo-audio
+ * source, so components never hardcode audio paths. null = not ready yet.
  */
-export const resolveAudioSource = (audioUrl: string): AudioSource => ({ uri: audioUrl });
+export const resolveAudioSource = (uri: string | null): AudioSource =>
+  uri === null ? null : { uri };

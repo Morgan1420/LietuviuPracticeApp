@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Pressable, StyleSheet, Text, View } from 'react-native';
 import { DropExercise } from '../../types/exercises';
-import { useExerciseAudio } from '../hooks/useExerciseAudio';
+import { DropSession } from '../hooks/useDropSession';
 import { colors, fontSize, radius, spacing, touchTarget } from '../theme/tokens';
 import { AudioControls } from './AudioControls';
 import { DropTranscript } from './DropTranscript';
@@ -10,30 +10,32 @@ import { PlaybackProgress } from './PlaybackProgress';
 
 interface DropPlayerProps {
   exercise: DropExercise;
+  /** Screen-level playback session (see useDropSession). */
+  session: DropSession;
   onNext: () => void;
 }
 
-/** Passive listening: audio + full transcript, no quiz. Mount with `key={exercise.id}`. */
-export const DropPlayer: React.FC<DropPlayerProps> = ({ exercise, onNext }) => {
-  const audio = useExerciseAudio(exercise.audioUrl);
+/** Passive listening: audio controls + full transcript, no quiz. Mount with `key={exercise.id}`. */
+export const DropPlayer: React.FC<DropPlayerProps> = ({ exercise, session, onNext }) => {
   const [showTranslation, setShowTranslation] = useState<boolean>(false);
 
   return (
     <View style={styles.card}>
       <Text style={styles.topic}>{exercise.topic}</Text>
       <Text style={styles.title}>{exercise.title}</Text>
+      {session.segment === 'chime' && <Text style={styles.status}>🔔 Starting…</Text>}
 
       <AudioControls
-        isLoaded={audio.isLoaded}
-        isPlaying={audio.isPlaying}
-        onPlay={audio.play}
-        onPause={audio.pause}
-        onReplay={() => audio.replay(1.0)}
+        isLoaded={session.isLoaded}
+        isPlaying={session.isPlaying}
+        onPlay={session.play}
+        onPause={session.pause}
+        onReplay={session.replay}
       />
       <PlaybackProgress
-        currentTime={audio.currentTime}
-        duration={audio.duration}
-        onSeek={audio.seekTo}
+        currentTime={session.currentTime}
+        duration={session.duration}
+        onSeek={session.seekTo}
       />
 
       <Pressable
@@ -71,6 +73,10 @@ const styles = StyleSheet.create({
     fontSize: fontSize.xl,
     fontWeight: '700',
     color: colors.text,
+  },
+  status: {
+    fontSize: fontSize.sm,
+    color: colors.textMuted,
   },
   toggle: {
     alignSelf: 'flex-start',
