@@ -1,0 +1,38 @@
+[
+  {
+    "id": "num_hard_0001",
+    "type": "number",
+    "context": "Phone number",
+    "prompt": "Type the phone number you hear.",
+    "audioUrl": "https://example.com/audio/lt/a1/num_hard_0001.mp3",
+    "transcriptLt": "Skambinkite numeriu plius trys septyni nulis, šeši, devyni, aštuoni, septyni, šeši, penki, keturi, trys.",
+    "answer": "+370 698 76543"
+  },
+  {
+    "id": "num_hard_0002",
+    "type": "number",
+    "context": "Price",
+    "prompt": "Type the ticket price.",
+    "audioUrl": "https://example.com/audio/lt/a1/num_hard_0002.mp3",
+    "transcriptLt": "Bilietas kainuoja trisdešimt septynis eurus devyniasdešimt devynis centus.",
+    "answer": "37,99 €"
+  },
+  {
+    "id": "num_hard_0003",
+    "type": "number",
+    "context": "Year",
+    "prompt": "Type the year of birth.",
+    "audioUrl": "https://example.com/audio/lt/a1/num_hard_0003.mp3",
+    "transcriptLt": "Aš gimiau tūkstantis devyni šimtai aštuoniasdešimt aštuntaisiais metais.",
+    "answer": "1988"
+  },
+  {
+    "id": "num_hard_0004",
+    "type": "number",
+    "context": "Order number",
+    "prompt": "Type the order number.",
+    "audioUrl": "https://example.com/audio/lt/a1/num_hard_0004.mp3",
+    "transcriptLt": "Jūsų užsakymo numeris – du tūkstančiai keturi šimtai penkiolika.",
+    "answer": "2415"
+  }
+]

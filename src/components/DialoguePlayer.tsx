@@ -1,7 +1,7 @@
 import React, { useCallback, useState } from 'react';
 import { Pressable, StyleSheet, Text, View } from 'react-native';
 import { DialogueExercise, OptionIndex } from '../../types/exercises';
-import { useDialogueAudio } from '../hooks/useDialogueAudio';
+import { useExerciseAudio } from '../hooks/useExerciseAudio';
 import { colors, fontSize, radius, spacing, touchTarget } from '../theme/tokens';
 import { AudioControls } from './AudioControls';
 import { QuestionCard } from './QuestionCard';
@@ -20,7 +20,7 @@ export const DialoguePlayer: React.FC<DialoguePlayerProps> = ({ exercise, onComp
   const [showText, setShowText] = useState<boolean>(false);
   const [questionIndex, setQuestionIndex] = useState<number>(0);
   const [selectedIndex, setSelectedIndex] = useState<OptionIndex | null>(null);
-  const audio = useDialogueAudio(exercise.audioUrl);
+  const audio = useExerciseAudio(exercise.audioUrl);
 
   const question = exercise.questions[questionIndex];
   const isLastQuestion = questionIndex === exercise.questions.length - 1;

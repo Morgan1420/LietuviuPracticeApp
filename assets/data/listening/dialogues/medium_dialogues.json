@@ -1,1 +1,1282 @@
-[]
+[
+  {
+    "id": "diag_0001",
+    "type": "dialogue",
+    "title": "Susitikimas kavinėje",
+    "topic": "Cafe & Meeting",
+    "audioUrl": "https://firebasestorage.googleapis.com/v0/b/lietuviulearningapp.firebasestorage.app/o/audio%2Fdiag_0001.mp3?alt=media&token=a5559b1c-6f9a-4ec6-8a24-52027b31142e",
+    "transcriptLt": "Labas, Toma! Kur tu esi? Aš jau kavinėje. Labas, Minedai! Būsiu už penkių minučių.",
+    "transcriptEn": "Hello, Tomas! Where are you? I'm already at the cafe. Hello, Minedas! I'll be there in five minutes.",
+    "keyVocabulary": [
+      { "lt": "Labas", "en": "Hello" },
+      { "lt": "Kur", "en": "Where" },
+      { "lt": "Kavinėje", "en": "In the cafe" },
+      { "lt": "Penkios minutės", "en": "Five minutes" },
+      { "lt": "Būsiu", "en": "I will be" }
+    ],
+    "questions": [
+      {
+        "id": "q_0001_1",
+        "questionText": "Where is Tomas currently waiting?",
+        "options": ["At home", "In the cafe", "On the bus", "At work"],
+        "correctOptionIndex": 1,
+        "explanation": "Tomas says 'Aš jau kavinėje' which translates to 'I am already in the cafe'."
+      },
+      {
+        "id": "q_0001_2",
+        "questionText": "When will the other person arrive?",
+        "options": ["In 5 minutes", "In 10 minutes", "Right now", "Tomorrow"],
+        "correctOptionIndex": 0,
+        "explanation": "She responds with 'Būsiu už penkių minučių' (I will be there in five minutes)."
+      }
+    ]
+  },
+  {
+    "id": "diag_0002",
+    "type": "dialogue",
+    "title": "Kava išsinešimui",
+    "topic": "Coffee - Standard Order",
+    "audioUrl": "https://firebasestorage.googleapis.com/v0/b/lietuviulearningapp.firebasestorage.app/o/audio%2Fdiag_0002.mp3?alt=media&token=53a1a25f-6ef9-4545-bd2c-5c79e8d494b0",
+    "transcriptLt": "Labas, ar galiu gauti kavos, prašau? Labas! Taip, vietoje ar išsinešimui? Išsinešimui, prašau. Gerai, kokio dydžio? Mažą, ačiū. Gerai, viena sekundė.",
+    "transcriptEn": "Hi, can I get a coffee, please? Hi! Yes, to stay or to go? To go, please. Okay, what size? Small, thank you. Okay, just a second.",
+    "keyVocabulary": [
+      { "lt": "Kava", "en": "Coffee" },
+      { "lt": "Vietoje", "en": "To stay (here)" },
+      { "lt": "Išsinešimui", "en": "To go" },
+      { "lt": "Dydis", "en": "Size" },
+      { "lt": "Maža", "en": "Small" }
+    ],
+    "questions": [
+      {
+        "id": "q_0002_1",
+        "questionText": "Does the customer want to drink the coffee at the cafe?",
+        "options": ["Yes, to stay", "No, to go", "He hasn't decided", "He wants to sit outside"],
+        "correctOptionIndex": 1,
+        "explanation": "He asks for 'Išsinešimui, prašau' which means 'To go, please'."
+      },
+      {
+        "id": "q_0002_2",
+        "questionText": "What size coffee does he ask for?",
+        "options": ["Large", "Medium", "Small", "Double"],
+        "correctOptionIndex": 2,
+        "explanation": "He orders 'Mažą, ačiū' (Small, thank you)."
+      }
+    ]
+  },
+  {
+    "id": "diag_0003",
+    "type": "dialogue",
+    "title": "Didelė juoda kava",
+    "topic": "Coffee - Size & Type Variation",
+    "audioUrl": "https://firebasestorage.googleapis.com/v0/b/lietuviulearningapp.firebasestorage.app/o/audio%2Fdiag_0003.mp3?alt=media&token=ec23cb4d-c130-47ab-a99f-3cd3fb60c0f7",
+    "transcriptLt": "Laba diena, prašau vieną juodą kavą. Laba diena. Gersite čia ar išsinešite? Išsinešimui. Didelę ar mažą? Didelę, ačiū. Tuoj bus!",
+    "transcriptEn": "Good day, one black coffee please. Good day. Will you drink here or take away? To go. Large or small? Large, thank you. Coming right up!",
+    "keyVocabulary": [
+      { "lt": "Juoda kava", "en": "Black coffee" },
+      { "lt": "Gersite čia", "en": "Will you drink here" },
+      { "lt": "Didelė", "en": "Large" },
+      { "lt": "Maža", "en": "Small" },
+      { "lt": "Tuoj bus", "en": "Coming right up / Soon" }
+    ],
+    "questions": [
+      {
+        "id": "q_0003_1",
+        "questionText": "What specific kind of coffee is ordered?",
+        "options": ["Cappuccino", "Black coffee", "Coffee with milk", "Espresso"],
+        "correctOptionIndex": 1,
+        "explanation": "The customer requests 'vieną juodą kavą' (one black coffee)."
+      },
+      {
+        "id": "q_0003_2",
+        "questionText": "Which size does the buyer pick this time?",
+        "options": ["Small", "Medium", "Large", "Extra large"],
+        "correctOptionIndex": 2,
+        "explanation": "He replies with 'Didelę, ačiū' (Large, thank you)."
+      }
+    ]
+  },
+  {
+    "id": "diag_0004",
+    "type": "dialogue",
+    "title": "Kava su pienu ryte",
+    "topic": "Coffee - Morning & Milk",
+    "audioUrl": "https://firebasestorage.googleapis.com/v0/b/lietuviulearningapp.firebasestorage.app/o/audio%2Fdiag_0004.mp3?alt=media&token=6f97dd0e-82db-493a-b530-aa07fb42ebf5",
+    "transcriptLt": "Labas rytas! Noriu kavos su pienu, prašau. Labas rytas! Ar gersite vietoje? Ne, išsinešimui. Vidutinio dydžio? Taip, vidutinę. Minutėlę!",
+    "transcriptEn": "Good morning! I want a coffee with milk, please. Good morning! Will you drink here? No, to go. Medium size? Yes, medium. One minute!",
+    "keyVocabulary": [
+      { "lt": "Labas rytas", "en": "Good morning" },
+      { "lt": "Kava su pienu", "en": "Coffee with milk" },
+      { "lt": "Noriu", "en": "I want" },
+      { "lt": "Vidutinė", "en": "Medium" },
+      { "lt": "Minutėlę", "en": "Just a minute" }
+    ],
+    "questions": [
+      {
+        "id": "q_0004_1",
+        "questionText": "What addition does the customer want in his coffee?",
+        "options": ["Sugar", "Milk", "Syrup", "Ice"],
+        "correctOptionIndex": 1,
+        "explanation": "He asks for 'kavos su pienu' (coffee with milk)."
+      },
+      {
+        "id": "q_0004_2",
+        "questionText": "What size coffee does the barista suggest and confirm?",
+        "options": ["Small", "Medium", "Large", "Huge"],
+        "correctOptionIndex": 1,
+        "explanation": "The barista asks 'Vidutinio dydžio?' and he confirms 'Taip, vidutinę' (Yes, medium)."
+      }
+    ]
+  },
+  {
+    "id": "diag_0005",
+    "type": "dialogue",
+    "title": "Kava čia, vietoje",
+    "topic": "Coffee - Staying at the Cafe",
+    "audioUrl": "https://firebasestorage.googleapis.com/v0/b/lietuviulearningapp.firebasestorage.app/o/audio%2Fdiag_0005.mp3?alt=media&token=431d08eb-d9e8-41d2-9ba9-95956776e09d",
+    "transcriptLt": "Sveiki, ar galima kapučino? Sveiki, taip! Norite čia ar išsinešti? Norėčiau gerti čia. Mažą ar didelį puodelį? Mažą puodelį, ačiū. Prisėskite, tuoj atnešiu.",
+    "transcriptEn": "Hello, can I have a cappuccino? Hello, yes! Would you like here or to go? I would like to drink here. A small or a large cup? A small cup, thank you. Have a seat, I'll bring it right away.",
+    "keyVocabulary": [
+      { "lt": "Sveiki", "en": "Hello / Greetings" },
+      { "lt": "Kapučino", "en": "Cappuccino" },
+      { "lt": "Gerti čia", "en": "To drink here" },
+      { "lt": "Puodelis", "en": "Cup" },
+      { "lt": "Prisėskite", "en": "Have a seat" }
+    ],
+    "questions": [
+      {
+        "id": "q_0005_1",
+        "questionText": "Where will the customer drink his cappuccino?",
+        "options": ["Outside", "In his car", "At the cafe (here)", "At work"],
+        "correctOptionIndex": 2,
+        "explanation": "He says 'Norėčiau gerti čia' (I would like to drink here)."
+      },
+      {
+        "id": "q_0005_2",
+        "questionText": "What does the barista tell the customer to do at the end?",
+        "options": ["Pay now", "Have a seat", "Wait at the counter", "Take a napkin"],
+        "correctOptionIndex": 1,
+        "explanation": "She tells him 'Prisėskite, tuoj atnešiu' (Have a seat, I will bring it right away)."
+      }
+    ]
+  },
+  {
+    "id": "diag_0006",
+    "type": "dialogue",
+    "title": "Dvi kavos išsinešimui",
+    "topic": "Coffee - Ordering Two Items",
+    "audioUrl": "https://firebasestorage.googleapis.com/v0/b/lietuviulearningapp.firebasestorage.app/o/audio%2Fdiag_0006.mp3?alt=media&token=35b766fa-f4b7-4c3b-9d5b-4793c2d9cecc",
+    "transcriptLt": "Labasvakaras! Ar galiu gauti dvi kavas? Sveiki! Taip, čia ar išsinešimui? Dvi juodas kavas išsinešimui, prašau. Kokio dydžio? Dvi dideles. Gerai, minutę!",
+    "transcriptEn": "Good evening! Can I get two coffees? Hello! Yes, here or to go? Two black coffees to go, please. What size? Two large ones. Okay, one minute!",
+    "keyVocabulary": [
+      { "lt": "Labas vakaras", "en": "Good evening" },
+      { "lt": "Dvi kavos", "en": "Two coffees" },
+      { "lt": "Dvi juodos kavos", "en": "Two black coffees" },
+      { "lt": "Didelės", "en": "Large (plural)" },
+      { "lt": "Minutė", "en": "A minute" }
+    ],
+    "questions": [
+      {
+        "id": "q_0006_1",
+        "questionText": "How many coffees does the customer order?",
+        "options": ["One", "Two", "Three", "Four"],
+        "correctOptionIndex": 1,
+        "explanation": "He asks for 'dvi kavas' (two coffees)."
+      },
+      {
+        "id": "q_0006_2",
+        "questionText": "What greeting is used at the start?",
+        "options": ["Labas rytas", "Laba diena", "Labas vakaras", "Sveiki"],
+        "correctOptionIndex": 2,
+        "explanation": "The conversation opens with 'Labas vakaras!' (Good evening!)."
+      }
+    ]
+  },
+  {
+    "id": "diag_0007",
+    "type": "dialogue",
+    "title": "Espreso ir vanduo",
+    "topic": "Coffee - Espresso & Water",
+    "audioUrl": "https://firebasestorage.googleapis.com/v0/b/lietuviulearningapp.firebasestorage.app/o/audio%2Fdiag_0007.mp3?alt=media&token=ed6b4174-4a34-46ef-80f2-ecf542c27e2d",
+    "transcriptLt": "Laba diena, prašau vieną espreso. Laba diena! Norite čia ar išsinešimui? Gersiu čia. Ar norite stiklinės vandens? Taip, ačiū. Momentą!",
+    "transcriptEn": "Good day, one espresso please. Good day! Would you like here or to go? I'll drink here. Would you like a glass of water? Yes, thank you. Just a moment!",
+    "keyVocabulary": [
+      { "lt": "Espreso", "en": "Espresso" },
+      { "lt": "Gersiu čia", "en": "I will drink here" },
+      { "lt": "Stiklinė vandens", "en": "Glass of water" },
+      { "lt": "Vanduo", "en": "Water" },
+      { "lt": "Momentą", "en": "Just a moment" }
+    ],
+    "questions": [
+      {
+        "id": "q_0007_1",
+        "questionText": "What drink option does the barista offer in addition?",
+        "options": ["Milk", "Sugar", "Glass of water", "Cake"],
+        "correctOptionIndex": 2,
+        "explanation": "She asks 'Ar norite stiklinės vandens?' (Would you like a glass of water?)."
+      },
+      {
+        "id": "q_0007_2",
+        "questionText": "What type of coffee is ordered?",
+        "options": ["Late", "Espresso", "Kapučino", "Kava su pienu"],
+        "correctOptionIndex": 1,
+        "explanation": "The customer orders 'vieną espreso' (one espresso)."
+      }
+    ]
+  },
+  {
+    "id": "diag_0008",
+    "type": "dialogue",
+    "title": "Šalta kava išsinešimui",
+    "topic": "Coffee - Iced Coffee",
+    "audioUrl": "https://firebasestorage.googleapis.com/v0/b/lietuviulearningapp.firebasestorage.app/o/audio%2Fdiag_0008.mp3?alt=media&token=f1c5d6e9-e01c-4377-b4bc-2e9491e756af",
+    "transcriptLt": "Labas! Ar turite šaltos kavos? Labas! Taip, turime. Ar imsite išsinešimui? Taip, išsinešimui. Didelę ar vidutinę? Vidutinę, prašau. Tuoj paruošiu!",
+    "transcriptEn": "Hi! Do you have iced coffee? Hi! Yes, we do. Will you take it to go? Yes, to go. Large or medium? Medium, please. I'll prepare it right away!",
+    "keyVocabulary": [
+      { "lt": "Šalta kava", "en": "Iced/Cold coffee" },
+      { "lt": "Ar turite?", "en": "Do you have?" },
+      { "lt": "Imsite", "en": "Will you take" },
+      { "lt": "Vidutinė", "en": "Medium" },
+      { "lt": "Tuoj paruošiu", "en": "I'll prepare it right away" }
+    ],
+    "questions": [
+      {
+        "id": "q_0008_1",
+        "questionText": "What kind of coffee does the customer ask for?",
+        "options": ["Hot black coffee", "Iced/Cold coffee", "Cappuccino", "Decaf"],
+        "correctOptionIndex": 1,
+        "explanation": "He asks 'Ar turite šaltos kavos?' (Do you have cold/iced coffee?)."
+      },
+      {
+        "id": "q_0008_2",
+        "questionText": "What size iced coffee does he choose?",
+        "options": ["Small", "Medium", "Large", "Double"],
+        "correctOptionIndex": 1,
+        "explanation": "He specifies 'Vidutinę, prašau' (Medium, please)."
+      }
+    ]
+  },
+  {
+    "id": "diag_0009",
+    "type": "dialogue",
+    "title": "Kava ir cukrus",
+    "topic": "Coffee - Sugar Options",
+    "audioUrl": "https://firebasestorage.googleapis.com/v0/b/lietuviulearningapp.firebasestorage.app/o/audio%2Fdiag_0009.mp3?alt=media&token=ab6e95d5-5a91-4ae3-bb72-8627137ebaeb",
+    "transcriptLt": "Sveiki, prašau vieną mažą kavą. Sveiki! Vietoje ar išsinešti? Išsinešimui. Ar reikės cukraus? Ne, be cukraus, ačiū. Gerai, viena sekundė.",
+    "transcriptEn": "Hello, one small coffee please. Hello! To stay or to go? To go. Will you need sugar? No, without sugar, thank you. Okay, just a second.",
+    "keyVocabulary": [
+      { "lt": "Maža kava", "en": "Small coffee" },
+      { "lt": "Reikės", "en": "Will need" },
+      { "lt": "Cukrus", "en": "Sugar" },
+      { "lt": "Be cukraus", "en": "Without sugar" },
+      { "lt": "Viena sekundė", "en": "One second" }
+    ],
+    "questions": [
+      {
+        "id": "q_0009_1",
+        "questionText": "Does the customer want sugar in his coffee?",
+        "options": ["Yes, one spoon", "Yes, two spoons", "No, without sugar", "He doesn't answer"],
+        "correctOptionIndex": 2,
+        "explanation": "He states 'Ne, be cukraus, ačiū' (No, without sugar, thank you)."
+      },
+      {
+        "id": "q_0009_2",
+        "questionText": "What Lithuanian phrase means 'without sugar'?",
+        "options": ["Su cukrumi", "Be cukraus", "Su pienu", "Be pieno"],
+        "correctOptionIndex": 1,
+        "explanation": "'Be cukraus' literally translates to 'without sugar'."
+      }
+    ]
+  },
+  {
+    "id": "diag_0010",
+    "type": "dialogue",
+    "title": "Mokėjimas už kavą",
+    "topic": "Coffee - Paying by Card",
+    "audioUrl": "https://firebasestorage.googleapis.com/v0/b/lietuviulearningapp.firebasestorage.app/o/audio%2Fdiag_0010.mp3?alt=media&token=01321d17-c585-40b5-a2c9-1d8eedb82eb3",
+    "transcriptLt": "Labas, noriu vienos vidutinės kavos išsinešimui. Labas! Gerai, trys eurai. Mokėsite kortele ar grynaisiais? Kortele, prašau. Ačiū, gražios dienos!",
+    "transcriptEn": "Hi, I want one medium coffee to go. Hi! Okay, three euros. Will you pay by card or cash? By card, please. Thank you, have a nice day!",
+    "keyVocabulary": [
+      { "lt": "Trys eurai", "en": "Three euros" },
+      { "lt": "Mokėsite", "en": "You will pay" },
+      { "lt": "Kortelė / Kortele", "en": "Card / By card" },
+      { "lt": "Grynieji / Grynaisiais", "en": "Cash / By cash" },
+      { "lt": "Gražios dienos", "en": "Have a nice day" }
+    ],
+    "questions": [
+      {
+        "id": "q_0010_1",
+        "questionText": "How much does the coffee cost?",
+        "options": ["1 euro", "2 euros", "3 euros", "5 euros"],
+        "correctOptionIndex": 2,
+        "explanation": "The barista says 'trys eurai' (three euros)."
+      },
+      {
+        "id": "q_0010_2",
+        "questionText": "How does the customer decide to pay?",
+        "options": ["By card", "With cash", "With a phone app", "He forgot his wallet"],
+        "correctOptionIndex": 0,
+        "explanation": "He replies with 'Kortele, prašau' (By card, please)."
+      }
+    ]
+  },
+  {
+    "id": "diag_0011",
+    "type": "dialogue",
+    "title": "Duona ir pienas parduotuvėje",
+    "topic": "Grocery - Bread and Milk",
+    "audioUrl": "https://firebasestorage.googleapis.com/v0/b/lietuviulearningapp.firebasestorage.app/o/audio%2Fdiag_0011.mp3?alt=media&token=ef75e9f3-a094-4a53-af3c-5a773574ed08",
+    "transcriptLt": "Laba diena, kur yra šviežia duona? Laba diena! Duona yra ten, prie pieno produktų. Ačiū! Ar turite šalto pieno? Taip, šaldytuve kairėje.",
+    "transcriptEn": "Good day, where is the fresh bread? Good day! The bread is over there, near the dairy products. Thank you! Do you have cold milk? Yes, in the fridge on the left.",
+    "keyVocabulary": [
+      { "lt": "Šviežia duona", "en": "Fresh bread" },
+      { "lt": "Pieno produktai", "en": "Dairy products" },
+      { "lt": "Šaltas pienas", "en": "Cold milk" },
+      { "lt": "Šaldytuvas", "en": "Refrigerator" },
+      { "lt": "Kairėje", "en": "On the left" }
+    ],
+    "questions": [
+      {
+        "id": "q_0011_1",
+        "questionText": "Where is the fresh bread located?",
+        "options": ["Near the entrance", "Near the dairy products", "At the checkout", "On the right"],
+        "correctOptionIndex": 1,
+        "explanation": "The worker says 'Duona yra ten, prie pieno produktų' (Bread is over there, near dairy products)."
+      },
+      {
+        "id": "q_0011_2",
+        "questionText": "Where can the customer find cold milk?",
+        "options": ["In the fridge on the left", "On the shelf on the right", "At the bakery section", "Outside"],
+        "correctOptionIndex": 0,
+        "explanation": "The answer is 'šaldytuve kairėje' (in the fridge on the left)."
+      }
+    ]
+  },
+  {
+    "id": "diag_0012",
+    "type": "dialogue",
+    "title": "Obuoliai ir bananai",
+    "topic": "Grocery - Buying Fruit",
+    "audioUrl": "https://firebasestorage.googleapis.com/v0/b/lietuviulearningapp.firebasestorage.app/o/audio%2Fdiag_0012.mp3?alt=media&token=9efc5b76-6c51-4944-870c-ef0e36b45c8e",
+    "transcriptLt": "Sveiki, kiek kainuoja šie obuoliai? Sveiki! Obuoliai kainuoja vieną eurą. Gerai, prašau du kilogramus. Ar dar ko nors reikės? Dar prašau tris bananus.",
+    "transcriptEn": "Hello, how much do these apples cost? Hello! Apples cost one euro. Okay, two kilograms please. Will you need anything else? Also three bananas please.",
+    "keyVocabulary": [
+      { "lt": "Kiek kainuoja?", "en": "How much does it cost?" },
+      { "lt": "Obuoliai", "en": "Apples" },
+      { "lt": "Du kilogramai", "en": "Two kilograms" },
+      { "lt": "Bananai", "en": "Bananas" },
+      { "lt": "Dar ko nors", "en": "Anything else" }
+    ],
+    "questions": [
+      {
+        "id": "q_0012_1",
+        "questionText": "How many kilograms of apples does the customer want?",
+        "options": ["One kilogram", "Two kilograms", "Three kilograms", "Five kilograms"],
+        "correctOptionIndex": 1,
+        "explanation": "The customer requests 'du kilogramus' (two kilograms)."
+      },
+      {
+        "id": "q_0012_2",
+        "questionText": "What additional fruit does the customer ask for?",
+        "options": ["Oranges", "Lemons", "Three bananas", "Pears"],
+        "correctOptionIndex": 2,
+        "explanation": "The customer asks for 'tris bananus' (three bananas)."
+      }
+    ]
+  },
+  {
+    "id": "diag_0013",
+    "type": "dialogue",
+    "title": "Mokėjimas kasoje",
+    "topic": "Grocery - Checkout",
+    "audioUrl": "",
+    "transcriptLt": "Laba diena, ar turite nuolaidų kortelę? Ne, neturiu. Viso bus šeši eurai. Ar mokėsite grynaisiais? Ne, mokėsiu kortele. Gerai, priglauskite kortelę čia.",
+    "transcriptEn": "Good day, do you have a discount card? No, I don't. Total will be six euros. Will you pay in cash? No, I'll pay by card. Okay, tap your card here.",
+    "keyVocabulary": [
+      { "lt": "Nuolaidų kortelė", "en": "Discount card" },
+      { "lt": "Viso", "en": "Total" },
+      { "lt": "Šeši eurai", "en": "Six euros" },
+      { "lt": "Mokėsiu", "en": "I will pay" },
+      { "lt": "Priglauskite", "en": "Tap / Touch" }
+    ],
+    "questions": [
+      {
+        "id": "q_0013_1",
+        "questionText": "Does the customer have a discount card?",
+        "options": ["Yes, in his wallet", "No, he does not", "He forgot it at home", "He uses an app"],
+        "correctOptionIndex": 1,
+        "explanation": "He replies with 'Ne, neturiu' (No, I don't have)."
+      },
+      {
+        "id": "q_0013_2",
+        "questionText": "How much is the total amount?",
+        "options": ["4 euros", "5 euros", "6 euros", "10 euros"],
+        "correctOptionIndex": 2,
+        "explanation": "The cashier says 'Viso bus šeši eurai' (Total will be six euros)."
+      }
+    ]
+  },
+  {
+    "id": "diag_0014",
+    "type": "dialogue",
+    "title": "Bakaleja ir vanduo",
+    "topic": "Grocery - Water & Bags",
+    "audioUrl": "",
+    "transcriptLt": "Labas, kur yra negazuotas vanduo? Labas! Negazuotas vanduo yra trečioje eilėje. Ačiū. Ar reikės maišelio? Taip, prašau vieną mažą maišelį.",
+    "transcriptEn": "Hi, where is still water? Hi! Still water is in the third aisle. Thank you. Will you need a bag? Yes, one small bag please.",
+    "keyVocabulary": [
+      { "lt": "Negazuotas vanduo", "en": "Still water" },
+      { "lt": "Trečia eilė", "en": "Third aisle / row" },
+      { "lt": "Maišelis", "en": "Plastic/Shopping bag" },
+      { "lt": "Reikės", "en": "Will need" },
+      { "lt": "Mažas", "en": "Small" }
+    ],
+    "questions": [
+      {
+        "id": "q_0014_1",
+        "questionText": "Which aisle contains the still water?",
+        "options": ["First aisle", "Second aisle", "Third aisle", "Fourth aisle"],
+        "correctOptionIndex": 2,
+        "explanation": "The worker states 'trečioje eilėje' (in the third aisle)."
+      },
+      {
+        "id": "q_0014_2",
+        "questionText": "What type of bag does the customer request?",
+        "options": ["Large bag", "Paper bag", "Small bag", "No bag"],
+        "correctOptionIndex": 2,
+        "explanation": "The customer requests 'vieną mažą maišelį' (one small bag)."
+      }
+    ]
+  },
+  {
+    "id": "diag_0015",
+    "type": "dialogue",
+    "title": "Sūris ir sviestas",
+    "topic": "Grocery - Cheese & Butter",
+    "audioUrl": "",
+    "transcriptLt": "Sveiki, ar turite lietuviško sūrio? Taip, turime labai skanaus sūrio. Prašau du šimtus gramų. Gerai. Ar dar reikės sviesto? Ne, sviesto jau turiu, ačiū.",
+    "transcriptEn": "Hello, do you have Lithuanian cheese? Yes, we have very tasty cheese. Please give me two hundred grams. Okay. Will you also need butter? No, I already have butter, thank you.",
+    "keyVocabulary": [
+      { "lt": "Lietuviškas sūris", "en": "Lithuanian cheese" },
+      { "lt": "Skanus", "en": "Tasty / Delicious" },
+      { "lt": "Du šimtai gramų", "en": "Two hundred grams" },
+      { "lt": "Sviestas", "en": "Butter" },
+      { "lt": "Jau turiu", "en": "I already have" }
+    ],
+    "questions": [
+      {
+        "id": "q_0015_1",
+        "questionText": "How much cheese does the buyer order?",
+        "options": ["100 grams", "200 grams", "500 grams", "1 kilogram"],
+        "correctOptionIndex": 1,
+        "explanation": "The buyer requests 'du šimtus gramų' (two hundred grams)."
+      },
+      {
+        "id": "q_0015_2",
+        "questionText": "Why does the customer decline the butter?",
+        "options": ["It's too expensive", "They don't like butter", "They already have butter", "It's out of stock"],
+        "correctOptionIndex": 2,
+        "explanation": "The customer states 'sviesto jau turiu' (I already have butter)."
+      }
+    ]
+  },
+  {
+    "id": "diag_0016",
+    "type": "dialogue",
+    "title": "Kur yra stotelė?",
+    "topic": "Directions - Bus Stop",
+    "audioUrl": "",
+    "transcriptLt": "Atsiprašau, kur yra autobusų stotelė? Stotelė yra tiesiai ir kairėje, prie parko. Ar tai toli? Ne, vos trys minutės pėsčiomis. Labai ačiū!",
+    "transcriptEn": "Excuse me, where is the bus stop? The stop is straight and on the left, near the park. Is it far? No, just three minutes on foot. Thank you very much!",
+    "keyVocabulary": [
+      { "lt": "Atsiprašau", "en": "Excuse me / Sorry" },
+      { "lt": "Autobusų stotelė", "en": "Bus stop" },
+      { "lt": "Tiesiai", "en": "Straight ahead" },
+      { "lt": "Prie parko", "en": "Near the park" },
+      { "lt": "Pėsčiomis", "en": "On foot" }
+    ],
+    "questions": [
+      {
+        "id": "q_0016_1",
+        "questionText": "Where is the bus stop located?",
+        "options": ["Behind the station", "Straight and on the left", "On the right next to the school", "Inside the mall"],
+        "correctOptionIndex": 1,
+        "explanation": "The directions given are 'tiesiai ir kairėje' (straight and on the left)."
+      },
+      {
+        "id": "q_0016_2",
+        "questionText": "How long does it take to walk there?",
+        "options": ["3 minutes", "10 minutes", "15 minutes", "1 hour"],
+        "correctOptionIndex": 0,
+        "explanation": "The passerby answers 'vos trys minutės pėsčiomis' (just three minutes on foot)."
+      }
+    ]
+  },
+  {
+    "id": "diag_0017",
+    "type": "dialogue",
+    "title": "Bilietas autobuse",
+    "topic": "Transport - Bus Ticket",
+    "audioUrl": "https://firebasestorage.googleapis.com/v0/b/lietuviulearningapp.firebasestorage.app/o/audio%2Fdiag_0017.mp3?alt=media",
+    "transcriptLt": "Laba diena, vieną bilietą, prašau. Laba diena! Vienas bilietas kainuoja vieną eurą. Ar galima mokėti kortele? Taip, priglauskite kortelę prie aparato. Ačiū!",
+    "transcriptEn": "Good day, one ticket please. Good day! One ticket costs one euro. Can I pay by card? Yes, tap your card on the device. Thank you!",
+    "keyVocabulary": [
+      { "lt": "Bilietas", "en": "Ticket" },
+      { "lt": "Kainuoja", "en": "Costs" },
+      { "lt": "Vienas euras", "en": "One euro" },
+      { "lt": "Aparatas", "en": "Machine / Device" },
+      { "lt": "Priglauskite", "en": "Tap / Touch" }
+    ],
+    "questions": [
+      {
+        "id": "q_0017_1",
+        "questionText": "How much does one bus ticket cost?",
+        "options": ["0.50 euros", "1 euro", "2 euros", "1.50 euros"],
+        "correctOptionIndex": 1,
+        "explanation": "The response is 'Vienas bilietas kainuoja vieną eurą' (One ticket costs one euro)."
+      },
+      {
+        "id": "q_0017_2",
+        "questionText": "How does the passenger pay for the ticket?",
+        "options": ["In cash", "By tapping a card", "With exact coins", "Via website"],
+        "correctOptionIndex": 1,
+        "explanation": "The driver instructs to 'priglauskite kortelę prie aparato' (tap your card on the device)."
+      }
+    ]
+  },
+  {
+    "id": "diag_0018",
+    "type": "dialogue",
+    "title": "Muziejus centre",
+    "topic": "Directions - Finding a Museum",
+    "audioUrl": "",
+    "transcriptLt": "Atsiprašau, kaip nueiti iki muziejaus? Eikite tiesiai, tada sukite į dešinę. Ar muziejus yra prie uostamiesčio aikštės? Taip, visai šalia aikštės. Ačiū už pagalbą!",
+    "transcriptEn": "Excuse me, how do I walk to the museum? Go straight, then turn right. Is the museum near the square? Yes, right next to the square. Thanks for the help!",
+    "keyVocabulary": [
+      { "lt": "Muziejus", "en": "Museum" },
+      { "lt": "Eikite tiesiai", "en": "Go straight" },
+      { "lt": "Sukite į dešinę", "en": "Turn right" },
+      { "lt": "Aikštė", "en": "Town square" },
+      { "lt": "Šalia", "en": "Next to / Beside" }
+    ],
+    "questions": [
+      {
+        "id": "q_0018_1",
+        "questionText": "What turn should the person take after walking straight?",
+        "options": ["Turn left", "Turn right", "Go back", "Stop"],
+        "correctOptionIndex": 1,
+        "explanation": "The instruction is 'sukite į dešinę' (turn right)."
+      },
+      {
+        "id": "q_0018_2",
+        "questionText": "What landmark is the museum close to?",
+        "options": ["The river", "The town square", "The bridge", "The train station"],
+        "correctOptionIndex": 1,
+        "explanation": "The answer confirms it is 'visai šalia aikštės' (right next to the square)."
+      }
+    ]
+  },
+  {
+    "id": "diag_0019",
+    "type": "dialogue",
+    "title": "Traukinys į Kauną",
+    "topic": "Transport - Train to Kaunas",
+    "audioUrl": "",
+    "transcriptLt": "Sveiki, kada išvyksta kitas traukinys į Kauną? Sveiki! Kitas traukinys išvyksta keturioliktą valandą. Iš kurio perono? Iš antro perono. Ačiū!",
+    "transcriptEn": "Hello, when does the next train to Kaunas leave? Hello! The next train leaves at 14:00. From which platform? From platform two. Thank you!",
+    "keyVocabulary": [
+      { "lt": "Kada išvyksta?", "en": "When does it depart?" },
+      { "lt": "Traukinys", "en": "Train" },
+      { "lt": "Keturiolikta valanda", "en": "14:00 (2 PM)" },
+      { "lt": "Peronas", "en": "Platform" },
+      { "lt": "Antras peronas", "en": "Second platform" }
+    ],
+    "questions": [
+      {
+        "id": "q_0019_1",
+        "questionText": "At what time does the train to Kaunas leave?",
+        "options": ["12:00", "13:00", "14:00", "15:00"],
+        "correctOptionIndex": 2,
+        "explanation": "The agent says 'keturioliktą valandą' (at 14:00 / 2 PM)."
+      },
+      {
+        "id": "q_0019_2",
+        "questionText": "Which platform will the train depart from?",
+        "options": ["Platform 1", "Platform 2", "Platform 3", "Platform 4"],
+        "correctOptionIndex": 1,
+        "explanation": "The train leaves 'Iš antro perono' (From platform 2)."
+      }
+    ]
+  },
+  {
+    "id": "diag_0020",
+    "type": "dialogue",
+    "title": "Taksi iškvietimas",
+    "topic": "Transport - Taxi",
+    "audioUrl": "",
+    "transcriptLt": "Labas, ar galiu užsakyti taksi į oro uostą? Taip, kur jūs esate? Aš esu Gedimino prospekte dešimt. Taksi atvažiuos už septynių minučių. Puiku, laukiu!",
+    "transcriptEn": "Hi, can I order a taxi to the airport? Yes, where are you? I'm at Gedimino avenue 10. The taxi will arrive in seven minutes. Great, I'll wait!",
+    "keyVocabulary": [
+      { "lt": "Užsakyti taksi", "en": "Order a taxi" },
+      { "lt": "Oro uostas", "en": "Airport" },
+      { "lt": "Kur jūs esate?", "en": "Where are you?" },
+      { "lt": "Atvažiuos", "en": "Will arrive (by vehicle)" },
+      { "lt": "Septynios minutės", "en": "Seven minutes" }
+    ],
+    "questions": [
+      {
+        "id": "q_0020_1",
+        "questionText": "Where does the passenger want to go?",
+        "options": ["To the station", "To the hotel", "To the airport", "To the city center"],
+        "correctOptionIndex": 2,
+        "explanation": "The passenger asks for a taxi 'į oro uostą' (to the airport)."
+      },
+      {
+        "id": "q_0020_2",
+        "questionText": "How long will it take for the taxi to arrive?",
+        "options": ["5 minutes", "7 minutes", "10 minutes", "15 minutes"],
+        "correctOptionIndex": 1,
+        "explanation": "The operator states 'už septynių minučių' (in seven minutes)."
+      }
+    ]
+  },
+  {
+    "id": "diag_0021",
+    "type": "dialogue",
+    "title": "Staliuko rezervacija",
+    "topic": "Restaurant - Table for Two",
+    "audioUrl": "",
+    "transcriptLt": "Laba diena, ar turite laisvą staliuką dviem? Laba diena! Taip, prie lango ar viduryje? Prie lango, prašau. Prašom sėstis, štai meniu. Ačiū labai.",
+    "transcriptEn": "Good day, do you have a free table for two? Good day! Yes, by the window or in the middle? By the window, please. Please sit down, here is the menu. Thank you very much.",
+    "keyVocabulary": [
+      { "lt": "Laisvas staliukas", "en": "Free table" },
+      { "lt": "Dviem", "en": "For two" },
+      { "lt": "Prie lango", "en": "By the window" },
+      { "lt": "Prašom sėstis", "en": "Please sit down" },
+      { "lt": "Meniu", "en": "Menu" }
+    ],
+    "questions": [
+      {
+        "id": "q_0021_1",
+        "questionText": "How many people is the table for?",
+        "options": ["One person", "Two people", "Three people", "Four people"],
+        "correctOptionIndex": 1,
+        "explanation": "The customer asks for a table 'dviem' (for two)."
+      },
+      {
+        "id": "q_0021_2",
+        "questionText": "Where does the customer prefer to sit?",
+        "options": ["Outside", "In the middle", "By the window", "Near the bar"],
+        "correctOptionIndex": 2,
+        "explanation": "The customer chooses 'Prie lango, prašau' (By the window, please)."
+      }
+    ]
+  },
+  {
+    "id": "diag_0022",
+    "type": "dialogue",
+    "title": "Dienos sriuba",
+    "topic": "Restaurant - Soup of the Day",
+    "audioUrl": "",
+    "transcriptLt": "Atsiprašau, kokia šiandien dienos sriuba? Šiandien turime pomidorų sriubą. Puiku, man vieną pomidorų sriubą. Ar gersite ko nors? Taip, mineralinio vandens.",
+    "transcriptEn": "Excuse me, what is today's soup of the day? Today we have tomato soup. Great, one tomato soup for me. Will you drink anything? Yes, mineral water.",
+    "keyVocabulary": [
+      { "lt": "Dienos sriuba", "en": "Soup of the day" },
+      { "lt": "Pomidorų sriuba", "en": "Tomato soup" },
+      { "lt": "Mineralinis vanduo", "en": "Mineral water" },
+      { "lt": "Šiandien", "en": "Today" },
+      { "lt": "Gersite", "en": "Will drink" }
+    ],
+    "questions": [
+      {
+        "id": "q_0022_1",
+        "questionText": "What is the soup of the day?",
+        "options": ["Mushroom soup", "Chicken soup", "Tomato soup", "Vegetable soup"],
+        "correctOptionIndex": 2,
+        "explanation": "The waiter replies 'Šiandien turime pomidorų sriubą' (Today we have tomato soup)."
+      },
+      {
+        "id": "q_0022_2",
+        "questionText": "What drink does the guest order?",
+        "options": ["Orange juice", "Mineral water", "Beer", "Tea"],
+        "correctOptionIndex": 1,
+        "explanation": "The guest orders 'mineralinio vandens' (mineral water)."
+      }
+    ]
+  },
+  {
+    "id": "diag_0023",
+    "type": "dialogue",
+    "title": "Pagrindinis patiekalas",
+    "topic": "Restaurant - Main Course",
+    "audioUrl": "",
+    "transcriptLt": "Ar jau išsirinkote? Taip, norėčiau vištienos su ryžiais. Ar patiekalas aštrus? Ne, visai neaštrus. Labai gerai, ačiū. Tuoj atnešiu!",
+    "transcriptEn": "Have you chosen yet? Yes, I would like chicken with rice. Is the dish spicy? No, not spicy at all. Very good, thank you. I'll bring it shortly!",
+    "keyVocabulary": [
+      { "lt": "Išsirinkote", "en": "Chosen / Decided" },
+      { "lt": "Vištiena", "en": "Chicken" },
+      { "lt": "Ryžiai", "en": "Rice" },
+      { "lt": "Aštrus", "en": "Spicy" },
+      { "lt": "Neaštrus", "en": "Not spicy" }
+    ],
+    "questions": [
+      {
+        "id": "q_0023_1",
+        "questionText": "What main dish does the guest select?",
+        "options": ["Pork with potatoes", "Chicken with rice", "Fish with salad", "Beef stew"],
+        "correctOptionIndex": 1,
+        "explanation": "The guest orders 'vištienos su ryžiais' (chicken with rice)."
+      },
+      {
+        "id": "q_0023_2",
+        "questionText": "Is the dish spicy?",
+        "options": ["Yes, very spicy", "No, not spicy at all", "A little bit spicy", "The waiter doesn't know"],
+        "correctOptionIndex": 1,
+        "explanation": "The waiter clarifies 'Ne, visai neaštrus' (No, not spicy at all)."
+      }
+    ]
+  },
+  {
+    "id": "diag_0024",
+    "type": "dialogue",
+    "title": "Desertas ir arbata",
+    "topic": "Restaurant - Dessert & Tea",
+    "audioUrl": "",
+    "transcriptLt": "Ar norėtumėte deserto? Taip, ar turite obuolių pyrago? Taip, turime! Ir prašau puodelį žalios arbatos. Supratau, vienas pyragas ir žalia arbata.",
+    "transcriptEn": "Would you like dessert? Yes, do you have apple pie? Yes, we do! And please a cup of green tea. Understood, one pie and green tea.",
+    "keyVocabulary": [
+      { "lt": "Desertas", "en": "Dessert" },
+      { "lt": "Obuolių pyragas", "en": "Apple pie" },
+      { "lt": "Žalia arbata", "en": "Green tea" },
+      { "lt": "Puodelis", "en": "Cup" },
+      { "lt": "Supratau", "en": "Understood / Got it" }
+    ],
+    "questions": [
+      {
+        "id": "q_0024_1",
+        "questionText": "Which dessert does the customer order?",
+        "options": ["Chocolate cake", "Ice cream", "Apple pie", "Pancakes"],
+        "correctOptionIndex": 2,
+        "explanation": "The customer orders 'obuolių pyrago' (apple pie)."
+      },
+      {
+        "id": "q_0024_2",
+        "questionText": "What kind of tea does the customer want?",
+        "options": ["Black tea", "Green tea", "Mint tea", "Fruit tea"],
+        "correctOptionIndex": 1,
+        "explanation": "The customer requests 'žalios arbatos' (green tea)."
+      }
+    ]
+  },
+  {
+    "id": "diag_0025",
+    "type": "dialogue",
+    "title": "Sąskaita restorane",
+    "topic": "Restaurant - Asking for the Bill",
+    "audioUrl": "",
+    "transcriptLt": "Atsiprašau, ar galima sąskaitą? Taip, žinoma. Ar viskas patiko? Maistas buvo labai skanus! Džiugu girdėti. Viso bus penkiolika eurų.",
+    "transcriptEn": "Excuse me, can I have the bill? Yes, of course. Did you enjoy everything? The food was very delicious! Glad to hear. Total will be fifteen euros.",
+    "keyVocabulary": [
+      { "lt": "Sąskaita", "en": "Bill / Receipt" },
+      { "lt": "Žinoma", "en": "Of course" },
+      { "lt": "Maistas", "en": "Food" },
+      { "lt": "Skanus", "en": "Delicious" },
+      { "lt": "Penkiolika eurų", "en": "Fifteen euros" }
+    ],
+    "questions": [
+      {
+        "id": "q_0025_1",
+        "questionText": "Did the customer like the food?",
+        "options": ["No, it was cold", "Yes, it was very delicious", "It was average", "Customer did not answer"],
+        "correctOptionIndex": 1,
+        "explanation": "The customer answers 'Maistas buvo labai skanus!' (The food was very delicious!)."
+      },
+      {
+        "id": "q_0025_2",
+        "questionText": "What is the total amount of the bill?",
+        "options": ["10 euros", "12 euros", "15 euros", "20 euros"],
+        "correctOptionIndex": 2,
+        "explanation": "The total is 'penkiolika eurų' (15 euros)."
+      }
+    ]
+  },
+  {
+    "id": "diag_0026",
+    "type": "dialogue",
+    "title": "Marškinėlių paieška",
+    "topic": "Clothing Store - T-Shirts",
+    "audioUrl": "",
+    "transcriptLt": "Laba diena, ar galiu kuo nors padėti? Laba diena, ieškau mėlynų marškinėlių. Kokio dydžio ieškote? Medium dydžio, prašau. Štai, pasimatuokite šiuos.",
+    "transcriptEn": "Good day, can I help you with anything? Good day, I'm looking for a blue t-shirt. What size are you looking for? Medium size, please. Here, try these on.",
+    "keyVocabulary": [
+      { "lt": "Padėti", "en": "To help" },
+      { "lt": "Ieškau", "en": "I am looking for" },
+      { "lt": "Mėlyni marškinėliai", "en": "Blue t-shirt" },
+      { "lt": "Dydis", "en": "Size" },
+      { "lt": "Pasimatuokite", "en": "Try on" }
+    ],
+    "questions": [
+      {
+        "id": "q_0026_1",
+        "questionText": "What color item is the buyer looking for?",
+        "options": ["Red t-shirt", "Blue t-shirt", "Black jacket", "White shirt"],
+        "correctOptionIndex": 1,
+        "explanation": "The buyer says 'ieškau mėlynų marškinėlių' (I am looking for a blue t-shirt)."
+      },
+      {
+        "id": "q_0026_2",
+        "questionText": "Which size does the customer ask for?",
+        "options": ["Small", "Medium", "Large", "Extra Large"],
+        "correctOptionIndex": 1,
+        "explanation": "The buyer specifies 'Medium dydžio, prašau' (Medium size, please)."
+      }
+    ]
+  },
+  {
+    "id": "diag_0027",
+    "type": "dialogue",
+    "title": "Pasimatavimo kabina",
+    "topic": "Clothing Store - Fitting Room",
+    "audioUrl": "",
+    "transcriptLt": "Atsiprašau, kur yra matavimosi kabina? Kabinos yra gale, dešinėje pusėje. Ačiū. Ar kelnės tinka? Taip, kelnės tinka puikiai!",
+    "transcriptEn": "Excuse me, where is the fitting room? The fitting rooms are at the back, on the right side. Thank you. Do the pants fit? Yes, the pants fit perfectly!",
+    "keyVocabulary": [
+      { "lt": "Matavimosi kabina", "en": "Fitting room" },
+      { "lt": "Gale", "en": "At the back" },
+      { "lt": "Dešinėje pusėje", "en": "On the right side" },
+      { "lt": "Kelnės", "en": "Pants / Trousers" },
+      { "lt": "Tinka puikiai", "en": "Fit perfectly" }
+    ],
+    "questions": [
+      {
+        "id": "q_0027_1",
+        "questionText": "Where are the fitting rooms located?",
+        "options": ["At the entrance", "At the back on the right side", "On the second floor", "Next to the cash register"],
+        "correctOptionIndex": 1,
+        "explanation": "The staff points 'gale, dešinėje pusėje' (at the back, on the right side)."
+      },
+      {
+        "id": "q_0027_2",
+        "questionText": "How do the pants fit?",
+        "options": ["Too small", "Too big", "They fit perfectly", "They are damaged"],
+        "correctOptionIndex": 2,
+        "explanation": "The customer answers 'kelnės tinka puikiai!' (pants fit perfectly!)."
+      }
+    ]
+  },
+  {
+    "id": "diag_0028",
+    "type": "dialogue",
+    "title": "Kita spalva",
+    "topic": "Clothing Store - Color Options",
+    "audioUrl": "",
+    "transcriptLt": "Sveiki, ar turite šį megztinį juodos spalvos? Sveiki, momentą, patikrinsiu. Taip, turime paskutinį juodą. Kokia jo kaina? Kainuoja trisdešimt eurų.",
+    "transcriptEn": "Hello, do you have this sweater in black color? Hello, one moment, I'll check. Yes, we have the last black one. What is its price? It costs thirty euros.",
+    "keyVocabulary": [
+      { "lt": "Megztinis", "en": "Sweater / Jumper" },
+      { "lt": "Juoda spalva", "en": "Black color" },
+      { "lt": "Patikrinsiu", "en": "I will check" },
+      { "lt": "Kaina", "en": "Price" },
+      { "lt": "Trisdešimt eurų", "en": "Thirty euros" }
+    ],
+    "questions": [
+      {
+        "id": "q_0028_1",
+        "questionText": "Which color of the sweater does the customer inquire about?",
+        "options": ["White", "Black", "Grey", "Red"],
+        "correctOptionIndex": 1,
+        "explanation": "The customer asks for 'juodos spalvos' (black color)."
+      },
+      {
+        "id": "q_0028_2",
+        "questionText": "How much does the sweater cost?",
+        "options": ["20 euros", "25 euros", "30 euros", "40 euros"],
+        "correctOptionIndex": 2,
+        "explanation": "The worker replies 'Kainuoja trisdešimt eurų' (Costs thirty euros)."
+      }
+    ]
+  },
+  {
+    "id": "diag_0029",
+    "type": "dialogue",
+    "title": "Batų paieška",
+    "topic": "Shoe Store - Shoe Size",
+    "audioUrl": "",
+    "transcriptLt": "Laba diena, ar turite šiuos batus keturiasdešimt antro dydžio? Laba diena, taip, turime! Ar norite pasimatuoti? Taip, prašau. Štai, prašom.",
+    "transcriptEn": "Good day, do you have these shoes in size 42? Good day, yes we do! Would you like to try them on? Yes, please. Here you go.",
+    "keyVocabulary": [
+      { "lt": "Batai", "en": "Shoes" },
+      { "lt": "Keturiasdešimt antras dydis", "en": "Size 42" },
+      { "lt": "Pasimatuoti", "en": "To try on" },
+      { "lt": "Turime", "en": "We have" },
+      { "lt": "Štai", "en": "Here (is)" }
+    ],
+    "questions": [
+      {
+        "id": "q_0029_1",
+        "questionText": "What shoe size is requested?",
+        "options": ["Size 40", "Size 41", "Size 42", "Size 43"],
+        "correctOptionIndex": 2,
+        "explanation": "The customer asks for 'keturiasdešimt antro dydžio' (size 42)."
+      },
+      {
+        "id": "q_0029_2",
+        "questionText": "Is the requested shoe size in stock?",
+        "options": ["Yes, they have it", "No, out of stock", "Only in another store", "Only online"],
+        "correctOptionIndex": 0,
+        "explanation": "The assistant confirms 'taip, turime!' (yes, we have!)."
+      }
+    ]
+  },
+  {
+    "id": "diag_0030",
+    "type": "dialogue",
+    "title": "Grąžinimas ir čekis",
+    "topic": "Shopping - Receipt & Return",
+    "audioUrl": "",
+    "transcriptLt": "Laba diena, ar galiu grąžinti šią striukę? Laba diena, taip, ar turite pirkimo čekį? Taip, štai čekis. Gerai, grąžinsime pinigus į kortelę.",
+    "transcriptEn": "Good day, can I return this jacket? Good day, yes, do you have the purchase receipt? Yes, here is the receipt. Okay, we will refund the money to your card.",
+    "keyVocabulary": [
+      { "lt": "Grąžinti", "en": "To return" },
+      { "lt": "Striukė", "en": "Jacket" },
+      { "lt": "Pirkimo čekis", "en": "Purchase receipt" },
+      { "lt": "Pinigai", "en": "Money" },
+      { "lt": "Grąžinsime", "en": "We will return/refund" }
+    ],
+    "questions": [
+      {
+        "id": "q_0030_1",
+        "questionText": "What item does the customer want to return?",
+        "options": ["A sweater", "A jacket", "Shoes", "A hat"],
+        "correctOptionIndex": 1,
+        "explanation": "The customer asks 'ar galiu grąžinti šią striukę?' (can I return this jacket?)."
+      },
+      {
+        "id": "q_0030_2",
+        "questionText": "Where will the money be refunded?",
+        "options": ["In cash", "To the bank card", "As store credit", "As a gift voucher"],
+        "correctOptionIndex": 1,
+        "explanation": "The employee states 'grąžinsime pinigus į kortelę' (we will refund money to the card)."
+      }
+    ]
+  },
+  {
+    "id": "diag_0031",
+    "type": "dialogue",
+    "title": "Kambario registracija",
+    "topic": "Hotel - Check-in",
+    "audioUrl": "",
+    "transcriptLt": "Laba diena, turiu rezervaciją vardu Jonas. Laba diena! Taip, matau rezervaciją dviviečiam kambariui. Prašau jūsų paso. Štai mano pasas. Ačiū!",
+    "transcriptEn": "Good day, I have a reservation under the name Jonas. Good day! Yes, I see a reservation for a double room. Please give me your passport. Here is my passport. Thank you!",
+    "keyVocabulary": [
+      { "lt": "Rezervacija", "en": "Reservation" },
+      { "lt": "Vardu", "en": "Under the name" },
+      { "lt": "Dvivietis kambarys", "en": "Double room" },
+      { "lt": "Pasas", "en": "Passport" },
+      { "lt": "Matau", "en": "I see" }
+    ],
+    "questions": [
+      {
+        "id": "q_0031_1",
+        "questionText": "Under what name is the reservation held?",
+        "options": ["Tomas", "Jonas", "Minedas", "Lukas"],
+        "correctOptionIndex": 1,
+        "explanation": "The guest says 'turiu rezervaciją vardu Jonas' (I have a reservation under the name Jonas)."
+      },
+      {
+        "id": "q_0031_2",
+        "questionText": "What document does the receptionist request?",
+        "options": ["Driver's license", "Passport", "Credit card", "Booking code"],
+        "correctOptionIndex": 1,
+        "explanation": "The receptionist requests 'Prašau jūsų paso' (Please give me your passport)."
+      }
+    ]
+  },
+  {
+    "id": "diag_0032",
+    "type": "dialogue",
+    "title": "Pusryčių laikas",
+    "topic": "Hotel - Breakfast Time",
+    "audioUrl": "",
+    "transcriptLt": "Atsiprašau, kelintą valandą yra pusryčiai? Pusryčiai yra nuo septintos iki dešimtos valandos. Kur jie vyksta? Pirme aukšte, restorane. Ačiū už informaciją!",
+    "transcriptEn": "Excuse me, what time is breakfast? Breakfast is from 7:00 to 10:00 o'clock. Where does it take place? On the first floor, in the restaurant. Thanks for the information!",
+    "keyVocabulary": [
+      { "lt": "Kelintą valandą?", "en": "At what time?" },
+      { "lt": "Pusryčiai", "en": "Breakfast" },
+      { "lt": "Nuo septintos iki dešimtos", "en": "From 7 to 10" },
+      { "lt": "Pirmas aukštas", "en": "First floor" },
+      { "lt": "Restoranas", "en": "Restaurant" }
+    ],
+    "questions": [
+      {
+        "id": "q_0032_1",
+        "questionText": "What time is breakfast served?",
+        "options": ["From 6:00 to 9:00", "From 7:00 to 10:00", "From 8:00 to 11:00", "From 9:00 to 12:00"],
+        "correctOptionIndex": 1,
+        "explanation": "The answer is 'nuo septintos iki dešimtos valandos' (from 7:00 to 10:00)."
+      },
+      {
+        "id": "q_0032_2",
+        "questionText": "On which floor is the breakfast restaurant located?",
+        "options": ["Ground floor", "First floor", "Second floor", "Top floor"],
+        "correctOptionIndex": 1,
+        "explanation": "The location is specified as 'Pirme aukšte' (On the first floor)."
+      }
+    ]
+  },
+  {
+    "id": "diag_0033",
+    "type": "dialogue",
+    "title": "Wi-Fi slaptažodis",
+    "topic": "Hotel - Wi-Fi Password",
+    "audioUrl": "",
+    "transcriptLt": "Labas, koks yra Wi-Fi slaptažodis? Labas! Slaptažodis parašytas ant šios kortelės. Ar internetas nemokamas? Taip, nemokamas visame viešbutyje. Labai gerai, ačiū!",
+    "transcriptEn": "Hi, what is the Wi-Fi password? Hi! The password is written on this card. Is the internet free? Yes, free throughout the entire hotel. Very good, thank you!",
+    "keyVocabulary": [
+      { "lt": "Slaptažodis", "en": "Password" },
+      { "lt": "Parašytas", "en": "Written" },
+      { "lt": "Kortelė", "en": "Card" },
+      { "lt": "Nemokamas", "en": "Free (of charge)" },
+      { "lt": "Viešbutis", "en": "Hotel" }
+    ],
+    "questions": [
+      {
+        "id": "q_0033_1",
+        "questionText": "Where can the guest find the Wi-Fi password?",
+        "options": ["On the wall", "Written on the key card", "In an email", "On the TV screen"],
+        "correctOptionIndex": 1,
+        "explanation": "The staff says 'parašytas ant šios kortelės' (written on this card)."
+      },
+      {
+        "id": "q_0033_2",
+        "questionText": "Does the guest have to pay for Wi-Fi?",
+        "options": ["Yes, 5 euros per day", "Only for high speed", "No, it is free", "Only in the lobby"],
+        "correctOptionIndex": 2,
+        "explanation": "The staff confirms 'Taip, nemokamas visame viešbutyje' (Yes, free in the whole hotel)."
+      }
+    ]
+  },
+  {
+    "id": "diag_0034",
+    "type": "dialogue",
+    "title": "Kambario raktas",
+    "topic": "Hotel - Room Key Issue",
+    "audioUrl": "",
+    "transcriptLt": "Atsiprašau, mano kambario raktas neveikia. Koks jūsų kambario numeris? Kambarys šimtas keturiolika. Tuoj pakeisiu kortelę. Štai, prašau naują raktą. Ačiū už pagalbą!",
+    "transcriptEn": "Excuse me, my room key is not working. What is your room number? Room 114. I'll change the card right away. Here is your new key. Thanks for the help!",
+    "keyVocabulary": [
+      { "lt": "Raktas neveikia", "en": "Key does not work" },
+      { "lt": "Kambario numeris", "en": "Room number" },
+      { "lt": "Šimtas keturiolika", "en": "One hundred fourteen (114)" },
+      { "lt": "Pakeisiu", "en": "I will change/replace" },
+      { "lt": "Naujas raktas", "en": "New key" }
+    ],
+    "questions": [
+      {
+        "id": "q_0034_1",
+        "questionText": "What is the guest's room number?",
+        "options": ["104", "114", "140", "214"],
+        "correctOptionIndex": 1,
+        "explanation": "The guest states 'Kambarys šimtas keturiolika' (Room 114)."
+      },
+      {
+        "id": "q_0034_2",
+        "questionText": "How does the receptionist solve the issue?",
+        "options": ["Calls an engineer", "Replaces the key card immediately", "Asks to wait one hour", "Changes the guest's room"],
+        "correctOptionIndex": 1,
+        "explanation": "The receptionist says 'Tuoj pakeisiu kortelę' (I'll replace the card right away)."
+      }
+    ]
+  },
+  {
+    "id": "diag_0035",
+    "type": "dialogue",
+    "title": "Išsiregistravimas iš viešbučio",
+    "topic": "Hotel - Check-out",
+    "audioUrl": "",
+    "transcriptLt": "Laba diena, noriu išsiregistruoti. Laba diena! Štai jūsų kambario raktas. Ačiū. Ar naudojotės mini baru? Ne, nenaudojau. Gerai, gražios kelionės!",
+    "transcriptEn": "Good day, I want to check out. Good day! Here is your room key. Thank you. Did you use the mini-bar? No, I didn't. Okay, have a nice trip!",
+    "keyVocabulary": [
+      { "lt": "Išsiregistruoti", "en": "To check out" },
+      { "lt": "Mini baras", "en": "Mini-bar" },
+      { "lt": "Nenaudojau", "en": "I didn't use" },
+      { "lt": "Gražios kelionės", "en": "Have a nice trip" },
+      { "lt": "Raktas", "en": "Key" }
+    ],
+    "questions": [
+      {
+        "id": "q_0035_1",
+        "questionText": "What action is the guest taking?",
+        "options": ["Booking a room", "Checking out", "Ordering room service", "Asking for extra towels"],
+        "correctOptionIndex": 1,
+        "explanation": "The guest opens with 'noriu išsiregistruoti' (I want to check out)."
+      },
+      {
+        "id": "q_0035_2",
+        "questionText": "Did the guest consume items from the mini-bar?",
+        "options": ["Yes, two drinks", "Yes, snacks", "No, didn't use it", "Guest paid earlier"],
+        "correctOptionIndex": 2,
+        "explanation": "The guest answers 'Ne, nenaudojau' (No, I didn't use it)."
+      }
+    ]
+  },
+  {
+    "id": "diag_0036",
+    "type": "dialogue",
+    "title": "Vaistai nuo galvos skausmo",
+    "topic": "Pharmacy - Headache Medicine",
+    "audioUrl": "",
+    "transcriptLt": "Laba diena, ar turite vaistų nuo galvos skausmo? Laba diena! Taip, turime šių tablečių. Kaip jas gerti? Gerkite po vieną tabletę du kartus per dieną. Ačiū!",
+    "transcriptEn": "Good day, do you have medicine for a headache? Good day! Yes, we have these tablets. How to take them? Take one tablet twice a day. Thank you!",
+    "keyVocabulary": [
+      { "lt": "Vaistai", "en": "Medicine" },
+      { "lt": "Galvos skausmas", "en": "Headache" },
+      { "lt": "Tabletės", "en": "Tablets / Pills" },
+      { "lt": "Du kartus per dieną", "en": "Twice a day" },
+      { "lt": "Gerkite", "en": "Take / Drink" }
+    ],
+    "questions": [
+      {
+        "id": "q_0036_1",
+        "questionText": "What condition does the customer need medicine for?",
+        "options": ["Cough", "Fever", "Headache", "Stomach ache"],
+        "correctOptionIndex": 2,
+        "explanation": "The customer asks for 'vaistų nuo galvos skausmo' (headache medicine)."
+      },
+      {
+        "id": "q_0036_2",
+        "questionText": "What is the recommended dosage?",
+        "options": ["One tablet once a day", "One tablet twice a day", "Two tablets three times a day", "Only at night"],
+        "correctOptionIndex": 1,
+        "explanation": "The pharmacist advises 'po vieną tabletę du kartus per dieną' (one tablet twice a day)."
+      }
+    ]
+  },
+  {
+    "id": "diag_0037",
+    "type": "dialogue",
+    "title": "Vaistai nuo peršalimo",
+    "topic": "Pharmacy - Cold & Tea",
+    "audioUrl": "",
+    "transcriptLt": "Sveiki, aš persišaldžiau. Ar turite arbatos nuo peršalimo? Sveiki! Taip, turime žolelių arbatos. Taip pat rekomenduoju vitaminą C. Gerai, paimsiu abu. Ačiū!",
+    "transcriptEn": "Hello, I caught a cold. Do you have tea for a cold? Hello! Yes, we have herbal tea. I also recommend vitamin C. Okay, I'll take both. Thank you!",
+    "keyVocabulary": [
+      { "lt": "Persišaldžiau", "en": "I caught a cold" },
+      { "lt": "Žolelių arbata", "en": "Herbal tea" },
+      { "lt": "Peršalimas", "en": "Cold illness" },
+      { "lt": "Rekomenduoju", "en": "I recommend" },
+      { "lt": "Paimsiu abu", "en": "I'll take both" }
+    ],
+    "questions": [
+      {
+        "id": "q_0037_1",
+        "questionText": "What product did the customer originally ask for?",
+        "options": ["Cough syrup", "Cold tea", "Nose drops", "Painkillers"],
+        "correctOptionIndex": 1,
+        "explanation": "The customer asks 'Ar turite arbatos nuo peršalimo?' (Do you have cold tea?)."
+      },
+      {
+        "id": "q_0037_2",
+        "questionText": "What additional product does the pharmacist recommend?",
+        "options": ["Vitamin D", "Vitamin C", "Aspirin", "Thermometer"],
+        "correctOptionIndex": 1,
+        "explanation": "The pharmacist suggests 'vitaminą C' (Vitamin C)."
+      }
+    ]
+  },
+  {
+    "id": "diag_0038",
+    "type": "dialogue",
+    "title": "Pleistras ir dezinfekcija",
+    "topic": "Pharmacy - First Aid",
+    "audioUrl": "",
+    "transcriptLt": "Laba diena, man reikia pleistro ir dezinfekcinio skysčio. Laba diena! Štai vandeniui atsparus pleistras ir skystis. Kiek viso kainuoja? Keturis eurus. Ačiū!",
+    "transcriptEn": "Good day, I need a plaster and disinfectant liquid. Good day! Here is a waterproof plaster and liquid. How much is the total? Four euros. Thank you!",
+    "keyVocabulary": [
+      { "lt": "Pleistras", "en": "Plaster / Band-aid" },
+      { "lt": "Dezinfekcinis skystis", "en": "Disinfectant liquid" },
+      { "lt": "Vandeniui atsparus", "en": "Waterproof" },
+      { "lt": "Keturis eurus", "en": "Four euros" },
+      { "lt": "Kiek kainuoja?", "en": "How much does it cost?" }
+    ],
+    "questions": [
+      {
+        "id": "q_0038_1",
+        "questionText": "What type of plaster is provided by the pharmacist?",
+        "options": ["Fabric plaster", "Waterproof plaster", "Large bandage", "Elastic wrap"],
+        "correctOptionIndex": 1,
+        "explanation": "The pharmacist offers 'vandeniui atsparus pleistras' (waterproof plaster)."
+      },
+      {
+        "id": "q_0038_2",
+        "questionText": "What is the total price for both items?",
+        "options": ["2 euros", "3 euros", "4 euros", "5 euros"],
+        "correctOptionIndex": 2,
+        "explanation": "The price is 'Keturis eurus' (4 euros)."
+      }
+    ]
+  },
+  {
+    "id": "diag_0039",
+    "type": "dialogue",
+    "title": "Receptiniai vaistai",
+    "topic": "Pharmacy - Prescription",
+    "audioUrl": "",
+    "transcriptLt": "Atsiprašau, ar turite šių receptinių vaistų? Taip, prašau parodyti receptą arba asmens dokumentą. Štai mano ID kortelė. Ačiū, matau jūsų e-receptą. Tuoj atnešiu.",
+    "transcriptEn": "Excuse me, do you have this prescription medicine? Yes, please show your prescription or ID document. Here is my ID card. Thank you, I see your e-prescription. I'll bring it right away.",
+    "keyVocabulary": [
+      { "lt": "Receptiniai vaistai", "en": "Prescription medicine" },
+      { "lt": "Receptas", "en": "Prescription" },
+      { "lt": "Asmens dokumentas", "en": "ID document" },
+      { "lt": "ID kortelė", "en": "ID card" },
+      { "lt": "E-receptas", "en": "E-prescription" }
+    ],
+    "questions": [
+      {
+        "id": "q_0039_1",
+        "questionText": "What type of medicine is the customer purchasing?",
+        "options": ["Vitamins", "Over-the-counter tea", "Prescription medicine", "Surgical mask"],
+        "correctOptionIndex": 2,
+        "explanation": "The query asks for 'receptinių vaistų' (prescription medicine)."
+      },
+      {
+        "id": "q_0039_2",
+        "questionText": "How does the pharmacist verify the prescription?",
+        "options": ["By paper receipt", "By checking the e-prescription with ID card", "By calling a doctor", "By asking for cash"],
+        "correctOptionIndex": 1,
+        "explanation": "The pharmacist says 'matau jūsų e-receptą' (I see your e-prescription) after seeing the ID card."
+      }
+    ]
+  },
+  {
+    "id": "diag_0040",
+    "type": "dialogue",
+    "title": "Vitaminas D ir pastilės",
+    "topic": "Pharmacy - Throat & Vitamins",
+    "audioUrl": "",
+    "transcriptLt": "Labas, man skauda gerklę. Ar turite pastilių nuo gerklės skausmo? Labas! Taip, šios pastilės labai geros. Taip pat siūlau vitaminą D. Labai gerai, paimsiu pastiles ir vitaminą D.",
+    "transcriptEn": "Hi, my throat hurts. Do you have lozenges for throat pain? Hi! Yes, these lozenges are very good. I also suggest vitamin D. Very good, I'll take lozenges and vitamin D.",
+    "keyVocabulary": [
+      { "lt": "Skauda gerklę", "en": "Throat hurts" },
+      { "lt": "Pastilės", "en": "Lozenges" },
+      { "lt": "Gerklės skausmas", "en": "Sore throat" },
+      { "lt": "Vitaminas D", "en": "Vitamin D" },
+      { "lt": "Siūlau", "en": "I suggest / offer" }
+    ],
+    "questions": [
+      {
+        "id": "q_0040_1",
+        "questionText": "What symptom does the customer complain about?",
+        "options": ["Headache", "Sore throat", "Fever", "Back pain"],
+        "correctOptionIndex": 1,
+        "explanation": "The customer states 'man skauda gerklę' (my throat hurts)."
+      },
+      {
+        "id": "q_0040_2",
+        "questionText": "Which vitamin does the pharmacist suggest?",
+        "options": ["Vitamin A", "Vitamin B", "Vitamin C", "Vitamin D"],
+        "correctOptionIndex": 3,
+        "explanation": "The pharmacist offers 'vitaminą D' (Vitamin D)."
+      }
+    ]
+  }
+]

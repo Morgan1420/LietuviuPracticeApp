@@ -5,6 +5,8 @@ export type RootStackParamList = {
   Home: undefined;
   ListeningMenu: undefined;
   DialogueExercise: { difficulty: Difficulty };
+  NumbersExercise: { difficulty: Difficulty };
+  DropsExercise: { difficulty: Difficulty };
   Placeholder: { title: string };
 };
 

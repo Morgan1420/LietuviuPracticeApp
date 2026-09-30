@@ -1,0 +1,178 @@
+[
+  {
+    "id": "drop_0001",
+    "type": "drop",
+    "title": "Susitikimas kavinėje",
+    "topic": "Cafe & Meeting",
+    "audioUrl": "https://firebasestorage.googleapis.com/v0/b/lietuviulearningapp.firebasestorage.app/o/audio%2Fdiag_0001.mp3?alt=media&token=a5559b1c-6f9a-4ec6-8a24-52027b31142e",
+    "lines": [
+      { "lt": "Labas, Toma! Kur tu esi?", "en": "Hello, Tomas! Where are you?" },
+      { "lt": "Aš jau kavinėje.", "en": "I'm already at the cafe." },
+      { "lt": "Labas, Minedai!", "en": "Hello, Minedas!" },
+      { "lt": "Būsiu už penkių minučių.", "en": "I'll be there in five minutes." }
+    ]
+  },
+  {
+    "id": "drop_0002",
+    "type": "drop",
+    "title": "Kava išsinešimui",
+    "topic": "Coffee - Standard Order",
+    "audioUrl": "https://firebasestorage.googleapis.com/v0/b/lietuviulearningapp.firebasestorage.app/o/audio%2Fdiag_0002.mp3?alt=media&token=53a1a25f-6ef9-4545-bd2c-5c79e8d494b0",
+    "lines": [
+      { "lt": "Labas, ar galiu gauti kavos, prašau?", "en": "Hi, can I get a coffee, please?" },
+      { "lt": "Labas! Taip, vietoje ar išsinešimui?", "en": "Hi! Yes, to stay or to go?" },
+      { "lt": "Išsinešimui, prašau.", "en": "To go, please." },
+      { "lt": "Gerai, kokio dydžio?", "en": "Okay, what size?" },
+      { "lt": "Mažą, ačiū.", "en": "Small, thank you." },
+      { "lt": "Gerai, viena sekundė.", "en": "Okay, just a second." }
+    ]
+  },
+  {
+    "id": "drop_0003",
+    "type": "drop",
+    "title": "Didelė juoda kava",
+    "topic": "Coffee - Size & Type Variation",
+    "audioUrl": "https://firebasestorage.googleapis.com/v0/b/lietuviulearningapp.firebasestorage.app/o/audio%2Fdiag_0003.mp3?alt=media&token=ec23cb4d-c130-47ab-a99f-3cd3fb60c0f7",
+    "lines": [
+      { "lt": "Laba diena, prašau vieną juodą kavą.", "en": "Good day, one black coffee please." },
+      { "lt": "Laba diena.", "en": "Good day." },
+      { "lt": "Gersite čia ar išsinešite?", "en": "Will you drink here or take away?" },
+      { "lt": "Išsinešimui.", "en": "To go." },
+      { "lt": "Didelę ar mažą?", "en": "Large or small?" },
+      { "lt": "Didelę, ačiū.", "en": "Large, thank you." },
+      { "lt": "Tuoj bus!", "en": "Coming right up!" }
+    ]
+  },
+  {
+    "id": "drop_0004",
+    "type": "drop",
+    "title": "Kava su pienu ryte",
+    "topic": "Coffee - Morning & Milk",
+    "audioUrl": "https://firebasestorage.googleapis.com/v0/b/lietuviulearningapp.firebasestorage.app/o/audio%2Fdiag_0004.mp3?alt=media&token=6f97dd0e-82db-493a-b530-aa07fb42ebf5",
+    "lines": [
+      { "lt": "Labas rytas! Noriu kavos su pienu, prašau.", "en": "Good morning! I want a coffee with milk, please." },
+      { "lt": "Labas rytas! Ar gersite vietoje?", "en": "Good morning! Will you drink here?" },
+      { "lt": "Ne, išsinešimui.", "en": "No, to go." },
+      { "lt": "Vidutinio dydžio?", "en": "Medium size?" },
+      { "lt": "Taip, vidutinę.", "en": "Yes, medium." },
+      { "lt": "Minutėlę!", "en": "One minute!" }
+    ]
+  },
+  {
+    "id": "drop_0005",
+    "type": "drop",
+    "title": "Kava čia, vietoje",
+    "topic": "Coffee - Staying at the Cafe",
+    "audioUrl": "https://firebasestorage.googleapis.com/v0/b/lietuviulearningapp.firebasestorage.app/o/audio%2Fdiag_0005.mp3?alt=media&token=431d08eb-d9e8-41d2-9ba9-95956776e09d",
+    "lines": [
+      { "lt": "Sveiki, ar galima kapučino?", "en": "Hello, can I have a cappuccino?" },
+      { "lt": "Sveiki, taip! Norite čia ar išsinešti?", "en": "Hello, yes! Would you like here or to go?" },
+      { "lt": "Norėčiau gerti čia.", "en": "I would like to drink here." },
+      { "lt": "Mažą ar didelį puodelį?", "en": "A small or a large cup?" },
+      { "lt": "Mažą puodelį, ačiū.", "en": "A small cup, thank you." },
+      { "lt": "Prisėskite, tuoj atnešiu.", "en": "Have a seat, I'll bring it right away." }
+    ]
+  },
+  {
+    "id": "drop_0006",
+    "type": "drop",
+    "title": "Dvi kavos išsinešimui",
+    "topic": "Coffee - Ordering Two Items",
+    "audioUrl": "https://firebasestorage.googleapis.com/v0/b/lietuviulearningapp.firebasestorage.app/o/audio%2Fdiag_0006.mp3?alt=media&token=35b766fa-f4b7-4c3b-9d5b-4793c2d9cecc",
+    "lines": [
+      { "lt": "Labas vakaras! Ar galiu gauti dvi kavas?", "en": "Good evening! Can I get two coffees?" },
+      { "lt": "Sveiki! Taip, čia ar išsinešimui?", "en": "Hello! Yes, here or to go?" },
+      { "lt": "Dvi juodas kavas išsinešimui, prašau.", "en": "Two black coffees to go, please." },
+      { "lt": "Kokio dydžio?", "en": "What size?" },
+      { "lt": "Dvi dideles.", "en": "Two large ones." },
+      { "lt": "Gerai, minutę!", "en": "Okay, one minute!" }
+    ]
+  },
+  {
+    "id": "drop_0007",
+    "type": "drop",
+    "title": "Espreso ir vanduo",
+    "topic": "Coffee - Espresso & Water",
+    "audioUrl": "https://firebasestorage.googleapis.com/v0/b/lietuviulearningapp.firebasestorage.app/o/audio%2Fdiag_0007.mp3?alt=media&token=ed6b4174-4a34-46ef-80f2-ecf542c27e2d",
+    "lines": [
+      { "lt": "Laba diena, prašau vieną espreso.", "en": "Good day, one espresso please." },
+      { "lt": "Laba diena! Norite čia ar išsinešimui?", "en": "Good day! Would you like here or to go?" },
+      { "lt": "Gersiu čia.", "en": "I'll drink here." },
+      { "lt": "Ar norite stiklinės vandens?", "en": "Would you like a glass of water?" },
+      { "lt": "Taip, ačiū.", "en": "Yes, thank you." },
+      { "lt": "Momentą!", "en": "Just a moment!" }
+    ]
+  },
+  {
+    "id": "drop_0008",
+    "type": "drop",
+    "title": "Šalta kava išsinešimui",
+    "topic": "Coffee - Iced Coffee",
+    "audioUrl": "https://firebasestorage.googleapis.com/v0/b/lietuviulearningapp.firebasestorage.app/o/audio%2Fdiag_0008.mp3?alt=media&token=f1c5d6e9-e01c-4377-b4bc-2e9491e756af",
+    "lines": [
+      { "lt": "Labas! Ar turite šaltos kavos?", "en": "Hi! Do you have iced coffee?" },
+      { "lt": "Labas! Taip, turime.", "en": "Hi! Yes, we do." },
+      { "lt": "Ar imsite išsinešimui?", "en": "Will you take it to go?" },
+      { "lt": "Taip, išsinešimui.", "en": "Yes, to go." },
+      { "lt": "Didelę ar vidutinę?", "en": "Large or medium?" },
+      { "lt": "Vidutinę, prašau.", "en": "Medium, please." },
+      { "lt": "Tuoj paruošiu!", "en": "I'll prepare it right away!" }
+    ]
+  },
+  {
+    "id": "drop_0009",
+    "type": "drop",
+    "title": "Kava ir cukrus",
+    "topic": "Coffee - Sugar Options",
+    "audioUrl": "https://firebasestorage.googleapis.com/v0/b/lietuviulearningapp.firebasestorage.app/o/audio%2Fdiag_0009.mp3?alt=media&token=ab6e95d5-5a91-4ae3-bb72-8627137ebaeb",
+    "lines": [
+      { "lt": "Sveiki, prašau vieną mažą kavą.", "en": "Hello, one small coffee please." },
+      { "lt": "Sveiki! Vietoje ar išsinešti?", "en": "Hello! To stay or to go?" },
+      { "lt": "Išsinešimui.", "en": "To go." },
+      { "lt": "Ar reikės cukraus?", "en": "Will you need sugar?" },
+      { "lt": "Ne, be cukraus, ačiū.", "en": "No, without sugar, thank you." },
+      { "lt": "Gerai, viena sekundė.", "en": "Okay, just a second." }
+    ]
+  },
+  {
+    "id": "drop_0010",
+    "type": "drop",
+    "title": "Mokėjimas už kavą",
+    "topic": "Coffee - Paying by Card",
+    "audioUrl": "https://firebasestorage.googleapis.com/v0/b/lietuviulearningapp.firebasestorage.app/o/audio%2Fdiag_0010.mp3?alt=media&token=01321d17-c585-40b5-a2c9-1d8eedb82eb3",
+    "lines": [
+      { "lt": "Labas, noriu vienos vidutinės kavos išsinešimui.", "en": "Hi, I want one medium coffee to go." },
+      { "lt": "Labas! Gerai, trys eurai.", "en": "Hi! Okay, three euros." },
+      { "lt": "Mokėsite kortele ar grynaisiais?", "en": "Will you pay by card or cash?" },
+      { "lt": "Kortele, prašau.", "en": "By card, please." },
+      { "lt": "Ačiū, gražios dienos!", "en": "Thank you, have a nice day!" }
+    ]
+  },
+  {
+    "id": "drop_0011",
+    "type": "drop",
+    "title": "Duona ir pienas parduotuvėje",
+    "topic": "Grocery - Bread and Milk",
+    "audioUrl": "https://firebasestorage.googleapis.com/v0/b/lietuviulearningapp.firebasestorage.app/o/audio%2Fdiag_0011.mp3?alt=media&token=ef75e9f3-a094-4a53-af3c-5a773574ed08",
+    "lines": [
+      { "lt": "Laba diena, kur yra šviežia duona?", "en": "Good day, where is the fresh bread?" },
+      { "lt": "Laba diena! Duona yra ten, prie pieno produktų.", "en": "Good day! The bread is over there, near the dairy products." },
+      { "lt": "Ačiū! Ar turite šalto pieno?", "en": "Thank you! Do you have cold milk?" },
+      { "lt": "Taip, šaldytuve kairėje.", "en": "Yes, in the fridge on the left." }
+    ]
+  },
+  {
+    "id": "drop_0012",
+    "type": "drop",
+    "title": "Obuoliai ir bananai",
+    "topic": "Grocery - Buying Fruit",
+    "audioUrl": "https://firebasestorage.googleapis.com/v0/b/lietuviulearningapp.firebasestorage.app/o/audio%2Fdiag_0012.mp3?alt=media&token=9efc5b76-6c51-4944-870c-ef0e36b45c8e",
+    "lines": [
+      { "lt": "Sveiki, kiek kainuoja šie obuoliai?", "en": "Hello, how much do these apples cost?" },
+      { "lt": "Sveiki! Obuoliai kainuoja vieną eurą.", "en": "Hello! Apples cost one euro." },
+      { "lt": "Gerai, prašau du kilogramus.", "en": "Okay, two kilograms please." },
+      { "lt": "Ar dar ko nors reikės?", "en": "Will you need anything else?" },
+      { "lt": "Dar prašau tris bananus.", "en": "Also three bananas please." }
+    ]
+  }
+]

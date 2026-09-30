@@ -1,0 +1,42 @@
+[
+  {
+    "id": "num_easy_0001",
+    "type": "number",
+    "context": "Price",
+    "prompt": "How much does it cost?",
+    "audioUrl": "https://example.com/audio/lt/a1/num_easy_0001.mp3",
+    "transcriptLt": "Tai kainuoja penkis eurus.",
+    "answer": "5 €",
+    "choices": { "options": ["5 €", "15 €", "50 €", "9 €"], "correctOptionIndex": 0 }
+  },
+  {
+    "id": "num_easy_0002",
+    "type": "number",
+    "context": "Room number",
+    "prompt": "What is the room number?",
+    "audioUrl": "https://example.com/audio/lt/a1/num_easy_0002.mp3",
+    "transcriptLt": "Jūsų kambario numeris – dvylika.",
+    "answer": "12",
+    "choices": { "options": ["2", "12", "20", "21"], "correctOptionIndex": 1 }
+  },
+  {
+    "id": "num_easy_0003",
+    "type": "number",
+    "context": "Age",
+    "prompt": "How old is the speaker?",
+    "audioUrl": "https://example.com/audio/lt/a1/num_easy_0003.mp3",
+    "transcriptLt": "Man trisdešimt metų.",
+    "answer": "30",
+    "choices": { "options": ["13", "3", "30", "33"], "correctOptionIndex": 2 }
+  },
+  {
+    "id": "num_easy_0004",
+    "type": "number",
+    "context": "Bus number",
+    "prompt": "Which bus should you take?",
+    "audioUrl": "https://example.com/audio/lt/a1/num_easy_0004.mp3",
+    "transcriptLt": "Autobuso numeris – keturiasdešimt trys.",
+    "answer": "43",
+    "choices": { "options": ["34", "43", "40", "47"], "correctOptionIndex": 1 }
+  }
+]

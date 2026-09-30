@@ -1,0 +1,28 @@
+[
+  {
+    "id": "drop_easy_0001",
+    "type": "drop",
+    "title": "Rytas",
+    "topic": "Morning routine",
+    "audioUrl": "https://example.com/audio/lt/a1/drop_easy_0001.mp3",
+    "lines": [
+      { "lt": "Labas rytas!", "en": "Good morning!" },
+      { "lt": "Aš keliuosi septintą valandą.", "en": "I get up at seven o'clock." },
+      { "lt": "Geriu kavą ir valgau pusryčius.", "en": "I drink coffee and eat breakfast." },
+      { "lt": "Paskui einu į darbą.", "en": "Then I go to work." }
+    ]
+  },
+  {
+    "id": "drop_easy_0002",
+    "type": "drop",
+    "title": "Mano šeima",
+    "topic": "Family",
+    "audioUrl": "https://example.com/audio/lt/a1/drop_easy_0002.mp3",
+    "lines": [
+      { "lt": "Čia mano šeima.", "en": "This is my family." },
+      { "lt": "Mano mama vardu Ona.", "en": "My mother's name is Ona." },
+      { "lt": "Mano tėtis dirba mokykloje.", "en": "My dad works at a school." },
+      { "lt": "Aš turiu brolį ir seserį.", "en": "I have a brother and a sister." }
+    ]
+  }
+]

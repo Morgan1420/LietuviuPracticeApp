@@ -8,7 +8,8 @@ interface AudioControlsProps {
   onPlay: () => void;
   onPause: () => void;
   onReplay: () => void;
-  onSlowReplay: () => void;
+  /** Omit to hide the 0.75x button (e.g. passive listening). */
+  onSlowReplay?: () => void;
 }
 
 interface ControlButtonProps {
@@ -53,7 +54,9 @@ export const AudioControls: React.FC<AudioControlsProps> = ({
     />
     <View style={styles.row}>
       <ControlButton label="↺ Replay 1.0x" onPress={onReplay} disabled={!isLoaded} />
-      <ControlButton label="🐢 Slow 0.75x" onPress={onSlowReplay} disabled={!isLoaded} />
+      {onSlowReplay && (
+        <ControlButton label="🐢 Slow 0.75x" onPress={onSlowReplay} disabled={!isLoaded} />
+      )}
     </View>
   </View>
 );

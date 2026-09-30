@@ -1,0 +1,38 @@
+[
+  {
+    "id": "num_medium_0001",
+    "type": "number",
+    "context": "Phone number",
+    "prompt": "Type the phone number you hear.",
+    "audioUrl": "https://example.com/audio/lt/a1/num_medium_0001.mp3",
+    "transcriptLt": "Mano telefono numeris: aštuoni, šeši, vienas, du, trys, keturi, penki, šeši, septyni.",
+    "answer": "8 612 34567"
+  },
+  {
+    "id": "num_medium_0002",
+    "type": "number",
+    "context": "Price",
+    "prompt": "Type the total price.",
+    "audioUrl": "https://example.com/audio/lt/a1/num_medium_0002.mp3",
+    "transcriptLt": "Iš viso – dvylika eurų penkiasdešimt centų.",
+    "answer": "12,50 €"
+  },
+  {
+    "id": "num_medium_0003",
+    "type": "number",
+    "context": "Room number",
+    "prompt": "Type the room number.",
+    "audioUrl": "https://example.com/audio/lt/a1/num_medium_0003.mp3",
+    "transcriptLt": "Jūsų kambario numeris – trys šimtai keturi.",
+    "answer": "304"
+  },
+  {
+    "id": "num_medium_0004",
+    "type": "number",
+    "context": "Order number",
+    "prompt": "Type the order number.",
+    "audioUrl": "https://example.com/audio/lt/a1/num_medium_0004.mp3",
+    "transcriptLt": "Jūsų užsakymo numeris – aštuoniasdešimt septyni.",
+    "answer": "87"
+  }
+]

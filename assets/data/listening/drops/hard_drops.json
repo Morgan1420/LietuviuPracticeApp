@@ -1,0 +1,29 @@
+[
+  {
+    "id": "drop_hard_0001",
+    "type": "drop",
+    "title": "Kelionė į Klaipėdą",
+    "topic": "Travel",
+    "audioUrl": "https://example.com/audio/lt/a1/drop_hard_0001.mp3",
+    "lines": [
+      { "lt": "Praėjusią vasarą su šeima važiavome į Klaipėdą.", "en": "Last summer my family and I went to Klaipėda." },
+      { "lt": "Kelionė traukiniu iš Vilniaus truko beveik keturias valandas.", "en": "The train journey from Vilnius took almost four hours." },
+      { "lt": "Klaipėdoje vaikščiojome po senamiestį ir valgėme šviežią žuvį.", "en": "In Klaipėda we walked around the old town and ate fresh fish." },
+      { "lt": "Vieną dieną nuplaukėme keltu į Kuršių neriją.", "en": "One day we took the ferry to the Curonian Spit." },
+      { "lt": "Ten buvo labai gražu, bet vėjuota.", "en": "It was very beautiful there, but windy." }
+    ]
+  },
+  {
+    "id": "drop_hard_0002",
+    "type": "drop",
+    "title": "Darbo diena",
+    "topic": "Work",
+    "audioUrl": "https://example.com/audio/lt/a1/drop_hard_0002.mp3",
+    "lines": [
+      { "lt": "Mano darbo diena prasideda aštuntą valandą ryto.", "en": "My working day starts at eight in the morning." },
+      { "lt": "Pirmiausia perskaitau laiškus ir susitariu dėl susitikimų.", "en": "First I read my emails and arrange meetings." },
+      { "lt": "Per pietų pertrauką dažniausiai valgau su kolegomis netoliese esančiame restorane.", "en": "During the lunch break I usually eat with colleagues at a nearby restaurant." },
+      { "lt": "Vakare, jei nesu pavargęs, einu į sporto salę.", "en": "In the evening, if I'm not tired, I go to the gym." }
+    ]
+  }
+]

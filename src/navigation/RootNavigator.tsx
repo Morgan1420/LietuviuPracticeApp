@@ -2,8 +2,10 @@ import React from 'react';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { RootStackParamList } from '../../types/navigation';
 import { DialogueExerciseScreen } from '../screens/DialogueExerciseScreen';
+import { DropsExerciseScreen } from '../screens/DropsExerciseScreen';
 import { HomeScreen } from '../screens/HomeScreen';
 import { ListeningMenuScreen } from '../screens/ListeningMenuScreen';
+import { NumbersExerciseScreen } from '../screens/NumbersExerciseScreen';
 import { PlaceholderScreen } from '../screens/PlaceholderScreen';
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
@@ -14,6 +16,8 @@ export const RootNavigator: React.FC = () => (
     <Stack.Screen name="Home" component={HomeScreen} />
     <Stack.Screen name="ListeningMenu" component={ListeningMenuScreen} />
     <Stack.Screen name="DialogueExercise" component={DialogueExerciseScreen} />
+    <Stack.Screen name="NumbersExercise" component={NumbersExerciseScreen} />
+    <Stack.Screen name="DropsExercise" component={DropsExerciseScreen} />
     <Stack.Screen name="Placeholder" component={PlaceholderScreen} />
   </Stack.Navigator>
 );

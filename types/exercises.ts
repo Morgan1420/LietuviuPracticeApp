@@ -1,4 +1,4 @@
-export type ExerciseType = 'dialogue' | 'repeat' | 'qa';
+export type ExerciseType = 'dialogue' | 'number' | 'drop' | 'repeat' | 'qa';
 
 export type Difficulty = 'easy' | 'medium' | 'hard';
 
@@ -33,6 +33,41 @@ export interface DialogueExercise {
   questions: DialogueQuestion[];
 }
 
+export interface NumberChoices {
+  options: DialogueOptions;
+  correctOptionIndex: OptionIndex;
+}
+
+/**
+ * Listening > Numbers. Easy files provide `choices` (multiple choice);
+ * medium/hard are answered by typing, compared on digits only.
+ */
+export interface NumberExercise {
+  id: string;
+  type: 'number';
+  context: string; // e.g. "Phone number", "Price"
+  prompt: string; // e.g. "What number do you hear?"
+  audioUrl: string;
+  transcriptLt: string;
+  answer: string; // Display form, e.g. "12,50 €" or "+370 698 76543"
+  choices?: NumberChoices;
+}
+
+export interface DropLine {
+  lt: string;
+  en: string;
+}
+
+/** Listening > Drops: passive listening with a line-by-line transcript. */
+export interface DropExercise {
+  id: string;
+  type: 'drop';
+  title: string;
+  topic: string;
+  audioUrl: string;
+  lines: DropLine[];
+}
+
 /** Mode 2: Repeat Practice (stub — not implemented yet). */
 export interface RepeatExercise {
   id: string;
@@ -53,4 +88,9 @@ export interface QAExercise {
   expectedKeywords: string[];
 }
 
-export type Exercise = DialogueExercise | RepeatExercise | QAExercise;
+export type Exercise =
+  | DialogueExercise
+  | NumberExercise
+  | DropExercise
+  | RepeatExercise
+  | QAExercise;

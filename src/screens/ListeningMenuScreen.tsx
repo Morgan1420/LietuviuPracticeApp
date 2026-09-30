@@ -10,8 +10,6 @@ import { colors, fontSize, spacing } from '../theme/tokens';
 
 const DEFAULT_DIFFICULTY: Difficulty = 'medium';
 
-const noop = (): void => {};
-
 export const ListeningMenuScreen: React.FC<RootStackScreenProps<'ListeningMenu'>> = ({
   navigation,
 }) => {
@@ -29,8 +27,15 @@ export const ListeningMenuScreen: React.FC<RootStackScreenProps<'ListeningMenu'>
           label="Dialogue"
           onPress={() => navigation.navigate('DialogueExercise', { difficulty })}
         />
-        <MenuButton disabled label="Numbers" caption="Coming soon" onPress={noop} />
-        <MenuButton disabled label="Drops" caption="Coming soon" onPress={noop} />
+        <MenuButton
+          label="Numbers"
+          onPress={() => navigation.navigate('NumbersExercise', { difficulty })}
+        />
+        <MenuButton
+          label="Drops"
+          caption="Passive listening"
+          onPress={() => navigation.navigate('DropsExercise', { difficulty })}
+        />
       </ScrollView>
     </ScreenContainer>
   );
