@@ -31,6 +31,8 @@ export const DropPlayer: React.FC<DropPlayerProps> = ({ exercise, session, onNex
         onPlay={session.play}
         onPause={session.pause}
         onReplay={session.replay}
+        isUnavailable={session.isUnavailable}
+        onRetry={session.retry}
       />
       <PlaybackProgress
         currentTime={session.currentTime}

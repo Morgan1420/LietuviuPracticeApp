@@ -12,18 +12,15 @@ export const HomeScreen: React.FC<RootStackScreenProps<'Home'>> = ({ navigation 
         Lietuvių kalba · A1
       </Text>
 
-      <MenuButton label="Listening" onPress={() => navigation.navigate('ListeningMenu')} />
       <MenuButton
-        variant="secondary"
-        label="Listen and repeat"
-        caption="Coming soon"
-        onPress={() => navigation.navigate('Placeholder', { title: 'Listen and repeat' })}
+        label="Listening"
+        caption="Dialogues · Numbers · Drops"
+        onPress={() => navigation.navigate('ListeningMenu')}
       />
       <MenuButton
-        variant="secondary"
-        label="AI Q&A"
-        caption="Coming soon"
-        onPress={() => navigation.navigate('Placeholder', { title: 'AI Q&A' })}
+        label="Speaking"
+        caption="Repeat · Complete Dialogue · AI Q&A"
+        onPress={() => navigation.navigate('SpeakingMenu')}
       />
 
       <View style={styles.divider} />

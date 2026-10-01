@@ -1,4 +1,4 @@
-import React, { useCallback, useMemo, useState } from 'react';
+import React, { useCallback, useState } from 'react';
 import { StyleSheet, Text } from 'react-native';
 import { RootStackScreenProps } from '../../types/navigation';
 import { DIFFICULTY_LABELS } from '../components/DifficultySelector';
@@ -6,9 +6,9 @@ import { ExerciseQueueView } from '../components/ExerciseQueueView';
 import { ExerciseScreenLayout } from '../components/ExerciseScreenLayout';
 import { NumberAnswerFormat, NumberExerciseCard } from '../components/NumberExerciseCard';
 import { Score, ScoreBadge } from '../components/ScoreBadge';
-import { loadNumbers } from '../data/loadNumbers';
 import { loadedExercises } from '../data/loadExercises';
 import { useExerciseQueue } from '../hooks/useExerciseQueue';
+import { useListeningContent } from '../hooks/useListeningContent';
 import { colors, fontSize } from '../theme/tokens';
 
 const EMPTY_SCORE: Score = { correct: 0, incorrect: 0 };
@@ -20,7 +20,7 @@ export const NumbersExerciseScreen: React.FC<RootStackScreenProps<'NumbersExerci
   const { difficulty } = route.params;
   const difficultyLabel = DIFFICULTY_LABELS[difficulty];
   const format: NumberAnswerFormat = difficulty === 'easy' ? 'choice' : 'input';
-  const result = useMemo(() => loadNumbers(difficulty), [difficulty]);
+  const result = useListeningContent('numbers', difficulty);
   const queue = useExerciseQueue(loadedExercises(result));
   const [score, setScore] = useState<Score>(EMPTY_SCORE);
 

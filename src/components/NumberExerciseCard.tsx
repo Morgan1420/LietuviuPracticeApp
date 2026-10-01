@@ -74,6 +74,8 @@ export const NumberExerciseCard: React.FC<NumberExerciseCardProps> = ({
         onPause={audio.pause}
         onReplay={() => audio.replay(1.0)}
         onSlowReplay={() => audio.replay(0.75)}
+        isUnavailable={audio.isUnavailable}
+        onRetry={audio.retry}
       />
 
       {choices ? (

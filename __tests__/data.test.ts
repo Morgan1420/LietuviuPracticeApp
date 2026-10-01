@@ -1,18 +1,25 @@
 import { Difficulty } from '../types/exercises';
-import { loadDialogues } from '../src/data/loadDialogues';
-import { loadDrops } from '../src/data/loadDrops';
-import { loadNumbers } from '../src/data/loadNumbers';
+import { loadBundledContent } from '../src/data/listeningContent';
 import { parseDropExercises } from '../src/data/parseDropExercises';
 import { parseNumberExercises } from '../src/data/parseNumberExercises';
 import { formatTime } from '../src/utils/formatTime';
 import { isSameNumber } from '../src/utils/normalizeNumber';
 import { shuffle } from '../src/utils/shuffle';
 
+// Only the bundled JSON is exercised here; no network or file system.
+jest.mock('../src/data/fetchJson', () => ({ fetchJson: jest.fn() }));
+jest.mock('../src/data/contentCache', () => ({
+  readCachedContent: jest.fn(),
+  writeCachedContent: jest.fn(),
+}));
+
 const DIFFICULTIES: Difficulty[] = ['easy', 'medium', 'hard'];
 
 describe('listening JSON files are valid', () => {
   test.each(DIFFICULTIES)('%s dialogues, numbers and drops', difficulty => {
-    for (const result of [loadDialogues(difficulty), loadNumbers(difficulty), loadDrops(difficulty)]) {
+    jest.spyOn(console, 'warn').mockImplementation(() => undefined);
+    for (const mode of ['dialogues', 'numbers', 'drops'] as const) {
+      const result = loadBundledContent(mode, difficulty);
       expect(result).toEqual(expect.objectContaining({ ok: true }));
     }
   });

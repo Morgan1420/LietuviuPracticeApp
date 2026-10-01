@@ -1,6 +1,13 @@
 import React from 'react';
 import { Pressable, StyleSheet, Text, View } from 'react-native';
-import { colors, fontSize, radius, spacing, touchTarget } from '../theme/tokens';
+import {
+  colors,
+  fontSize,
+  radius,
+  spacing,
+  touchTarget,
+} from '../theme/tokens';
+import { AudioUnavailableNotice } from './AudioUnavailableNotice';
 
 interface AudioControlsProps {
   isLoaded: boolean;
@@ -10,6 +17,9 @@ interface AudioControlsProps {
   onReplay: () => void;
   /** Omit to hide the 0.75x button (e.g. passive listening). */
   onSlowReplay?: () => void;
+  /** When true, a notice with "Try again" replaces the controls. */
+  isUnavailable?: boolean;
+  onRetry?: () => void;
 }
 
 interface ControlButtonProps {
@@ -19,7 +29,12 @@ interface ControlButtonProps {
   primary?: boolean;
 }
 
-const ControlButton: React.FC<ControlButtonProps> = ({ label, onPress, disabled, primary }) => (
+const ControlButton: React.FC<ControlButtonProps> = ({
+  label,
+  onPress,
+  disabled,
+  primary,
+}) => (
   <Pressable
     accessibilityRole="button"
     accessibilityLabel={label}
@@ -44,22 +59,35 @@ export const AudioControls: React.FC<AudioControlsProps> = ({
   onPause,
   onReplay,
   onSlowReplay,
-}) => (
-  <View style={styles.container}>
-    <ControlButton
-      primary
-      label={isPlaying ? '⏸ Pause' : '▶ Play'}
-      onPress={isPlaying ? onPause : onPlay}
-      disabled={!isLoaded}
-    />
-    <View style={styles.row}>
-      <ControlButton label="↺ Replay 1.0x" onPress={onReplay} disabled={!isLoaded} />
-      {onSlowReplay && (
-        <ControlButton label="🐢 Slow 0.75x" onPress={onSlowReplay} disabled={!isLoaded} />
-      )}
+  isUnavailable = false,
+  onRetry,
+}) =>
+  isUnavailable && onRetry ? (
+    <AudioUnavailableNotice onRetry={onRetry} />
+  ) : (
+    <View style={styles.container}>
+      <ControlButton
+        primary
+        label={isPlaying ? '⏸ Pause' : '▶ Play'}
+        onPress={isPlaying ? onPause : onPlay}
+        disabled={!isLoaded}
+      />
+      <View style={styles.row}>
+        <ControlButton
+          label="↺ Replay 1.0x"
+          onPress={onReplay}
+          disabled={!isLoaded}
+        />
+        {onSlowReplay && (
+          <ControlButton
+            label="🐢 Slow 0.75x"
+            onPress={onSlowReplay}
+            disabled={!isLoaded}
+          />
+        )}
+      </View>
     </View>
-  </View>
-);
+  );
 
 const styles = StyleSheet.create({
   container: {

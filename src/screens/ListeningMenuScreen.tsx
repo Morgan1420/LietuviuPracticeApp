@@ -24,7 +24,7 @@ export const ListeningMenuScreen: React.FC<RootStackScreenProps<'ListeningMenu'>
 
         <Text style={styles.sectionTitle}>Mode</Text>
         <MenuButton
-          label="Dialogue"
+          label="Dialogues"
           onPress={() => navigation.navigate('DialogueExercise', { difficulty })}
         />
         <MenuButton

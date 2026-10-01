@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactTestRenderer, { ReactTestRenderer as Renderer } from 'react-test-renderer';
 import { DropExercise } from '../types/exercises';
+import { AUDIO_LOAD_TIMEOUT_MS } from '../src/audio/audioTimeouts';
 import { SOUND_EFFECTS } from '../src/audio/soundEffects';
 import { DropSession, useDropSession } from '../src/hooks/useDropSession';
 import { ExerciseQueue, useExerciseQueue } from '../src/hooks/useExerciseQueue';
@@ -67,6 +68,8 @@ const Harness: React.FC<{ autoPlay: boolean }> = ({ autoPlay }) => {
   return null;
 };
 
+const mounted: Renderer[] = [];
+
 const mount = async (autoPlay: boolean): Promise<Renderer> => {
   let renderer: Renderer | undefined;
   await ReactTestRenderer.act(async () => {
@@ -75,7 +78,22 @@ const mount = async (autoPlay: boolean): Promise<Renderer> => {
   if (!renderer) {
     throw new Error('Harness did not render');
   }
+  mounted.push(renderer);
   return renderer;
+};
+
+afterEach(async () => {
+  await ReactTestRenderer.act(async () => {
+    mounted.splice(0).forEach(renderer => renderer.unmount());
+  });
+  jest.useRealTimers();
+  jest.restoreAllMocks();
+});
+
+const emit = async (update: StatusUpdate): Promise<void> => {
+  await ReactTestRenderer.act(async () => {
+    mockPlayer.emit(update);
+  });
 };
 
 const finish = async (): Promise<void> => {
@@ -92,6 +110,7 @@ const currentDrop = (): DropExercise => {
 };
 
 beforeEach(() => {
+  jest.spyOn(console, 'warn').mockImplementation(() => undefined);
   mockPlayer = new FakePlayer();
   mockSetAudioMode.mockClear();
   session = undefined;
@@ -186,4 +205,68 @@ test('enables background audio + lock-screen controls, and turns background off 
   expect(mockSetAudioMode).toHaveBeenLastCalledWith(
     expect.objectContaining({ shouldPlayInBackground: false }),
   );
+});
+
+describe('audio that fails to load', () => {
+  test('auto-play skips a drop whose audio errors, instead of stalling', async () => {
+    await mount(true);
+    const first = currentDrop();
+    await finish(); // chime → first drop loads
+    expect(mockPlayer.replace).toHaveBeenLastCalledWith(cachedUri(first));
+
+    await emit({ error: 'Source error: 404', isLoaded: false });
+    expect(queue?.position).toBe(1);
+    expect(mockPlayer.replace).toHaveBeenLastCalledWith(SOUND_EFFECTS.transitionChime);
+
+    await finish(); // chime → second drop plays normally
+    expect(mockPlayer.replace).toHaveBeenLastCalledWith(cachedUri(currentDrop()));
+    expect(session?.isUnavailable).toBe(false);
+  });
+
+  test('auto-play skips a drop that never finishes loading', async () => {
+    jest.useFakeTimers();
+    await mount(true);
+    await finish(); // chime → first drop starts loading, never reports isLoaded
+
+    await ReactTestRenderer.act(async () => {
+      jest.advanceTimersByTime(AUDIO_LOAD_TIMEOUT_MS);
+    });
+    expect(queue?.position).toBe(1);
+    expect(mockPlayer.replace).toHaveBeenLastCalledWith(SOUND_EFFECTS.transitionChime);
+  });
+
+  test('a drop that reports loaded in time is not skipped', async () => {
+    jest.useFakeTimers();
+    await mount(true);
+    await finish(); // chime → first drop
+    await emit({ isLoaded: true, playing: true });
+
+    await ReactTestRenderer.act(async () => {
+      jest.advanceTimersByTime(AUDIO_LOAD_TIMEOUT_MS * 2);
+    });
+    expect(queue?.position).toBe(0);
+  });
+
+  test('with auto-play off the drop shows "unavailable" and can be retried', async () => {
+    await mount(false);
+    const first = currentDrop();
+    await emit({ error: 'Source error: 404', isLoaded: false });
+    expect(session?.isUnavailable).toBe(true);
+    expect(queue?.position).toBe(0);
+
+    await ReactTestRenderer.act(async () => session?.retry());
+    expect(session?.isUnavailable).toBe(false);
+    expect(mockPlayer.replace).toHaveBeenLastCalledWith(cachedUri(first));
+    expect(mockPlayer.play).toHaveBeenCalledTimes(1);
+  });
+
+  test('when every drop fails, auto-play ends the session instead of looping', async () => {
+    await mount(true);
+    for (let i = 0; i < DROPS.length; i++) {
+      await finish(); // chime
+      await emit({ error: 'offline', isLoaded: false }); // drop fails → skip
+    }
+    expect(queue?.current).toBeUndefined();
+    expect(session?.segment).toBe('idle');
+  });
 });

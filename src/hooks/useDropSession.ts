@@ -3,6 +3,7 @@ import { AudioStatus, useAudioPlayer } from 'expo-audio';
 import { DropExercise } from '../../types/exercises';
 import { configureAudioMode } from '../audio/audioMode';
 import { getCachedAudioUri, prefetchAudio } from '../audio/audioCache';
+import { AUDIO_LOAD_TIMEOUT_MS } from '../audio/audioTimeouts';
 import { SOUND_EFFECTS } from '../audio/soundEffects';
 import { usePlayerStatus } from './usePlayerStatus';
 
@@ -17,6 +18,10 @@ export interface DropSession {
   currentTime: number;
   /** Drop length in seconds (0 until loaded / while the chime plays). */
   duration: number;
+  /** The current drop's audio failed to load (only shown when auto-play is off). */
+  isUnavailable: boolean;
+  /** Tries loading the current drop again. */
+  retry: () => void;
   play: () => void;
   pause: () => void;
   replay: () => void;
@@ -51,6 +56,7 @@ export const useDropSession = ({
   const player = useAudioPlayer(null);
   const status = usePlayerStatus(player);
   const [segment, setSegmentState] = useState<DropSegment>('idle');
+  const [isUnavailable, setUnavailable] = useState<boolean>(false);
 
   // Refs read by native event handlers, which may fire while backgrounded.
   const segmentRef = useRef<DropSegment>('idle');
@@ -58,6 +64,16 @@ export const useDropSession = ({
   const generation = useRef<number>(0);
   const latest = useRef({ upcoming, autoPlay, onAdvance });
   latest.current = { upcoming, autoPlay, onAdvance };
+  const loadTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+  // Assigned below; lets loadDrop's timeout reach the failure handler without a cycle.
+  const onDropFailure = useRef<(drop: DropExercise, reason: string) => void>(() => undefined);
+
+  const clearLoadTimer = useCallback((): void => {
+    if (loadTimer.current !== null) {
+      clearTimeout(loadTimer.current);
+      loadTimer.current = null;
+    }
+  }, []);
 
   const setSegment = useCallback((next: DropSegment): void => {
     segmentRef.current = next;
@@ -69,6 +85,8 @@ export const useDropSession = ({
     async (drop: DropExercise, autoStart: boolean): Promise<void> => {
       const token = ++generation.current;
       targetDrop.current = drop;
+      clearLoadTimer();
+      setUnavailable(false);
       const uri = await getCachedAudioUri(drop.audioUrl);
       if (token !== generation.current) {
         return;
@@ -76,6 +94,13 @@ export const useDropSession = ({
       try {
         player.replace({ uri });
         setSegment('drop');
+        // Cleared by the status listener once the drop reports isLoaded.
+        loadTimer.current = setTimeout(() => {
+          loadTimer.current = null;
+          if (token === generation.current && segmentRef.current === 'drop') {
+            onDropFailure.current(drop, `not loaded after ${AUDIO_LOAD_TIMEOUT_MS} ms`);
+          }
+        }, AUDIO_LOAD_TIMEOUT_MS);
         player.updateLockScreenMetadata({ title: drop.title, artist: LOCK_SCREEN_ARTIST });
         if (autoStart) {
           player.play();
@@ -84,7 +109,7 @@ export const useDropSession = ({
         console.error(`[AudioPlayback Error]: could not load drop ${drop.id}`, error);
       }
     },
-    [player, setSegment],
+    [player, setSegment, clearLoadTimer],
   );
 
   /** Plays the chime; the status listener loads and starts `drop` when it ends. */
@@ -92,6 +117,8 @@ export const useDropSession = ({
     (drop: DropExercise): void => {
       generation.current++;
       targetDrop.current = drop;
+      clearLoadTimer();
+      setUnavailable(false);
       prefetchAudio(drop.audioUrl);
       try {
         player.replace(SOUND_EFFECTS.transitionChime);
@@ -103,8 +130,32 @@ export const useDropSession = ({
         loadDrop(drop, true);
       }
     },
-    [player, setSegment, loadDrop],
+    [player, setSegment, loadDrop, clearLoadTimer],
   );
+
+  /** Advances the queue and chimes into the next drop, or stops at the end. */
+  const skipToNext = useCallback((): void => {
+    const next = latest.current.upcoming;
+    latest.current.onAdvance();
+    if (next) {
+      chimeThen(next);
+    } else {
+      generation.current++;
+      targetDrop.current = null;
+      setSegment('idle');
+    }
+  }, [chimeThen, setSegment]);
+
+  onDropFailure.current = (drop: DropExercise, reason: string): void => {
+    clearLoadTimer();
+    if (latest.current.autoPlay) {
+      console.warn(`[AudioPlayback Warning]: drop ${drop.id} unavailable (${reason}); skipping`);
+      skipToNext();
+    } else {
+      console.warn(`[AudioPlayback Warning]: drop ${drop.id} unavailable (${reason})`);
+      setUnavailable(true);
+    }
+  };
 
   const start = useCallback(
     (drop: DropExercise, withAutoPlay: boolean): void => {
@@ -126,6 +177,7 @@ export const useDropSession = ({
       console.error('[AudioPlayback Error]: could not enable lock-screen controls', error);
     }
     return () => {
+      clearLoadTimer();
       configureAudioMode({ background: false });
       try {
         player.setActiveForLockScreen(false);
@@ -133,31 +185,36 @@ export const useDropSession = ({
         // The player may already be released on unmount; that also unregisters it.
       }
     };
-  }, [player]);
+  }, [player, clearLoadTimer]);
 
-  // Native-driven transitions: chime end → drop; drop end → next (auto-play).
+  // Native-driven transitions: chime end → drop; drop end or failure → next (auto-play).
   useEffect(() => {
     const subscription = player.addListener('playbackStatusUpdate', (update: AudioStatus) => {
+      const drop = targetDrop.current;
+      if (update.error) {
+        if (segmentRef.current === 'chime' && drop) {
+          loadDrop(drop, true); // A broken chime must not block the drop.
+        } else if (segmentRef.current === 'drop' && drop) {
+          onDropFailure.current(drop, update.error);
+        }
+        return;
+      }
+      if (segmentRef.current === 'drop' && update.isLoaded) {
+        clearLoadTimer();
+      }
       if (!update.didJustFinish) {
         return;
       }
-      if (segmentRef.current === 'chime' && targetDrop.current) {
-        loadDrop(targetDrop.current, true);
+      if (segmentRef.current === 'chime' && drop) {
+        loadDrop(drop, true);
         return;
       }
       if (segmentRef.current === 'drop' && latest.current.autoPlay) {
-        const next = latest.current.upcoming;
-        latest.current.onAdvance();
-        if (next) {
-          chimeThen(next);
-        } else {
-          targetDrop.current = null;
-          setSegment('idle');
-        }
+        skipToNext();
       }
     });
     return () => subscription.remove();
-  }, [player, loadDrop, chimeThen, setSegment]);
+  }, [player, loadDrop, skipToNext, clearLoadTimer]);
 
   // Queue changes from the UI ("Next drop", Start over, first load). Transitions
   // already started by the listener above are recognised and skipped.
@@ -165,6 +222,7 @@ export const useDropSession = ({
     if (!current) {
       generation.current++;
       targetDrop.current = null;
+      clearLoadTimer();
       player.pause();
       setSegment('idle');
       return;
@@ -172,7 +230,7 @@ export const useDropSession = ({
     if (targetDrop.current?.id !== current.id) {
       start(current, latest.current.autoPlay);
     }
-  }, [current, player, start, setSegment]);
+  }, [current, player, start, setSegment, clearLoadTimer]);
 
   // Turning auto-play off during the chime cancels the automatic start.
   useEffect(() => {
@@ -235,6 +293,13 @@ export const useDropSession = ({
     [player],
   );
 
+  const retry = useCallback((): void => {
+    const drop = targetDrop.current ?? current;
+    if (drop) {
+      loadDrop(drop, true);
+    }
+  }, [current, loadDrop]);
+
   const inDrop = segment === 'drop';
   return {
     segment,
@@ -243,6 +308,8 @@ export const useDropSession = ({
     isPlaying: inDrop && status.playing,
     currentTime: inDrop ? status.currentTime : 0,
     duration: inDrop ? status.duration : 0,
+    isUnavailable,
+    retry,
     play,
     pause,
     replay,

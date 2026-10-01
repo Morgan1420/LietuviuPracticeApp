@@ -13,10 +13,22 @@ export interface ExerciseQueue<T> {
   restart: () => void;
 }
 
-/** Serves exercises in a random order that is reshuffled on every load and restart. */
+/**
+ * Serves exercises in a random order that is reshuffled on every load and
+ * restart — including when `items` arrives later (async remote content).
+ */
 export const useExerciseQueue = <T>(items: readonly T[]): ExerciseQueue<T> => {
+  const [source, setSource] = useState<readonly T[]>(items);
   const [order, setOrder] = useState<T[]>(() => shuffle(items));
   const [position, setPosition] = useState<number>(0);
+
+  // New item list → new shuffled queue (state adjusted during render, React's
+  // recommended alternative to an effect for derived resets).
+  if (source !== items) {
+    setSource(items);
+    setOrder(shuffle(items));
+    setPosition(0);
+  }
 
   const advance = useCallback((): void => setPosition(p => p + 1), []);
 

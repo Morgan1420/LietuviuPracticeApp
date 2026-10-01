@@ -1,5 +1,3 @@
-import { Difficulty } from '../../types/exercises';
-
 export type ExerciseLoadResult<T> =
   | { ok: true; exercises: T[] }
   | { ok: false; message: string };
@@ -18,11 +16,8 @@ export const loadExercises = <T>(
   }
 };
 
-export const listeningFileName = (difficulty: Difficulty, mode: string): string =>
-  `${difficulty}_${mode}.json`;
-
 const NO_EXERCISES: never[] = [];
 
-/** The exercises of a load result, or a stable empty list if loading failed. */
-export const loadedExercises = <T>(result: ExerciseLoadResult<T>): readonly T[] =>
-  result.ok ? result.exercises : NO_EXERCISES;
+/** The exercises of a load result, or a stable empty list while loading or on failure. */
+export const loadedExercises = <T>(result: ExerciseLoadResult<T> | null): readonly T[] =>
+  result?.ok ? result.exercises : NO_EXERCISES;

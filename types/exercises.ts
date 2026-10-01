@@ -1,4 +1,10 @@
-export type ExerciseType = 'dialogue' | 'number' | 'drop' | 'repeat' | 'qa';
+export type ExerciseType = 'dialogue' | 'number' | 'drop' | 'repeat' | 'completeDialogue' | 'qa';
+
+/** Listening module modes; also the keys of the remote content config. */
+export type ListeningMode = 'dialogues' | 'numbers' | 'drops';
+
+/** Where a loaded exercise set came from (remote first, then fallbacks). */
+export type ContentSource = 'remote' | 'cache' | 'bundled';
 
 export type Difficulty = 'easy' | 'medium' | 'hard';
 
@@ -68,7 +74,7 @@ export interface DropExercise {
   lines: DropLine[];
 }
 
-/** Mode 2: Repeat Practice (stub — not implemented yet). */
+/** Speaking > Repeat (Shadowing) (stub — not implemented yet). */
 export interface RepeatExercise {
   id: string;
   type: 'repeat';
@@ -78,7 +84,17 @@ export interface RepeatExercise {
   audioUrl: string;
 }
 
-/** Mode 3: Interactive Q&A (stub — not implemented yet). */
+/** Speaking > Complete Dialogue (stub — not implemented yet). */
+export interface CompleteDialogueExercise {
+  id: string;
+  type: 'completeDialogue';
+  audioUrl: string;
+  /** Dialogue lines; the learner says the line at `missingLineIndex`. */
+  linesLt: string[];
+  missingLineIndex: number;
+}
+
+/** Speaking > AI Q&A (stub — not implemented yet). */
 export interface QAExercise {
   id: string;
   type: 'qa';
@@ -93,4 +109,5 @@ export type Exercise =
   | NumberExercise
   | DropExercise
   | RepeatExercise
+  | CompleteDialogueExercise
   | QAExercise;

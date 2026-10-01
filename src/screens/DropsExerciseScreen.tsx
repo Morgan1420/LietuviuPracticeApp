@@ -1,14 +1,14 @@
-import React, { useMemo, useState } from 'react';
+import React, { useState } from 'react';
 import { RootStackScreenProps } from '../../types/navigation';
 import { AutoPlayToggle } from '../components/AutoPlayToggle';
 import { DIFFICULTY_LABELS } from '../components/DifficultySelector';
 import { DropPlayer } from '../components/DropPlayer';
 import { ExerciseQueueView } from '../components/ExerciseQueueView';
 import { ExerciseScreenLayout } from '../components/ExerciseScreenLayout';
-import { loadDrops } from '../data/loadDrops';
 import { loadedExercises } from '../data/loadExercises';
 import { useDropSession } from '../hooks/useDropSession';
 import { useExerciseQueue } from '../hooks/useExerciseQueue';
+import { useListeningContent } from '../hooks/useListeningContent';
 
 export const DropsExerciseScreen: React.FC<RootStackScreenProps<'DropsExercise'>> = ({
   navigation,
@@ -16,7 +16,7 @@ export const DropsExerciseScreen: React.FC<RootStackScreenProps<'DropsExercise'>
 }) => {
   const { difficulty } = route.params;
   const difficultyLabel = DIFFICULTY_LABELS[difficulty];
-  const result = useMemo(() => loadDrops(difficulty), [difficulty]);
+  const result = useListeningContent('drops', difficulty);
   const queue = useExerciseQueue(loadedExercises(result));
   const [autoPlay, setAutoPlay] = useState<boolean>(true);
   // Lives at screen level (not per drop) so playback continues across drops,

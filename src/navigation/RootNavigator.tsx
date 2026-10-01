@@ -7,6 +7,10 @@ import { HomeScreen } from '../screens/HomeScreen';
 import { ListeningMenuScreen } from '../screens/ListeningMenuScreen';
 import { NumbersExerciseScreen } from '../screens/NumbersExerciseScreen';
 import { PlaceholderScreen } from '../screens/PlaceholderScreen';
+import { SpeakingMenuScreen } from '../screens/SpeakingMenuScreen';
+import { AIQAScreen } from '../screens/speaking/AIQAScreen';
+import { CompleteDialogueScreen } from '../screens/speaking/CompleteDialogueScreen';
+import { RepeatPracticeScreen } from '../screens/speaking/RepeatPracticeScreen';
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
 
@@ -18,6 +22,10 @@ export const RootNavigator: React.FC = () => (
     <Stack.Screen name="DialogueExercise" component={DialogueExerciseScreen} />
     <Stack.Screen name="NumbersExercise" component={NumbersExerciseScreen} />
     <Stack.Screen name="DropsExercise" component={DropsExerciseScreen} />
+    <Stack.Screen name="SpeakingMenu" component={SpeakingMenuScreen} />
+    <Stack.Screen name="RepeatPractice" component={RepeatPracticeScreen} />
+    <Stack.Screen name="CompleteDialogue" component={CompleteDialogueScreen} />
+    <Stack.Screen name="AIQA" component={AIQAScreen} />
     <Stack.Screen name="Placeholder" component={PlaceholderScreen} />
   </Stack.Navigator>
 );

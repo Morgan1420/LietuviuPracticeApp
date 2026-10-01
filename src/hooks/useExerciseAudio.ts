@@ -3,6 +3,7 @@ import { useAudioPlayer } from 'expo-audio';
 import { configureAudioMode } from '../audio/audioMode';
 import { resolveAudioSource } from '../audio/resolveAudioSource';
 import { useCachedAudioUri } from './useCachedAudioUri';
+import { useAudioLoadWatchdog } from './useAudioLoadWatchdog';
 import { usePlayerStatus } from './usePlayerStatus';
 
 export type PlaybackRate = 0.75 | 1.0;
@@ -16,6 +17,10 @@ export interface ExerciseAudio {
   duration: number;
   /** True on the status update where playback reached the end. */
   didJustFinish: boolean;
+  /** The clip failed to load (error or timeout); show a notice instead of controls. */
+  isUnavailable: boolean;
+  /** Tries loading the clip again after it was marked unavailable. */
+  retry: () => void;
   play: () => Promise<void>;
   pause: () => void;
   replay: (rate: PlaybackRate) => Promise<void>;
@@ -34,6 +39,12 @@ export const useExerciseAudio = (audioUrl: string): ExerciseAudio => {
   const playableUri = useCachedAudioUri(audioUrl);
   const player = useAudioPlayer(resolveAudioSource(playableUri));
   const status = usePlayerStatus(player);
+  const watchdog = useAudioLoadWatchdog({
+    label: audioUrl,
+    hasSource: playableUri !== null,
+    isLoaded: status.isLoaded,
+    error: status.error,
+  });
 
   useEffect(() => {
     configureAudioMode({ background: false });
@@ -92,12 +103,24 @@ export const useExerciseAudio = (audioUrl: string): ExerciseAudio => {
     [player, audioUrl],
   );
 
+  const { reset: resetWatchdog } = watchdog;
+  const retry = useCallback((): void => {
+    resetWatchdog();
+    try {
+      player.replace(resolveAudioSource(playableUri));
+    } catch (error) {
+      console.error(`[AudioPlayback Error]: retry failed for ${audioUrl}`, error);
+    }
+  }, [player, playableUri, resetWatchdog, audioUrl]);
+
   return {
     isLoaded: status.isLoaded,
     isPlaying: status.playing,
     currentTime: status.currentTime,
     duration: status.duration,
     didJustFinish: status.didJustFinish,
+    isUnavailable: watchdog.failed,
+    retry,
     play,
     pause,
     replay,

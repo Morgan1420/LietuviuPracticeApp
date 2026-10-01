@@ -7,15 +7,23 @@ import { Text, TextInput } from 'react-native';
 import ReactTestRenderer, { ReactTestInstance, ReactTestRenderer as Renderer } from 'react-test-renderer';
 import App from '../App';
 import { Difficulty } from '../types/exercises';
-import { loadDialogues } from '../src/data/loadDialogues';
-import { loadNumbers } from '../src/data/loadNumbers';
-import { loadDrops } from '../src/data/loadDrops';
+import { loadBundledContent } from '../src/data/listeningContent';
 
 // The real SafeAreaProvider renders nothing until native insets arrive.
 jest.mock(
   'react-native-safe-area-context',
   () => require('react-native-safe-area-context/jest/mock').default,
 );
+
+// Remote loading is covered in listeningContent.test.ts; here the network is
+// "offline" so every screen falls back to the bundled JSON deterministically.
+jest.mock('../src/data/fetchJson', () => ({
+  fetchJson: () => Promise.reject(new Error('offline in tests')),
+}));
+jest.mock('../src/data/contentCache', () => ({
+  readCachedContent: () => Promise.resolve(undefined),
+  writeCachedContent: () => undefined,
+}));
 
 // Caching is covered in audioCache.test.ts; here audio plays from the remote URL.
 jest.mock('../src/audio/audioCache', () => ({
@@ -74,6 +82,21 @@ const press = async (renderer: Renderer, label: string): Promise<void> => {
   });
 };
 
+// Every rendered app is unmounted after its test. Leaving navigation trees
+// mounted kept timers alive and made Jest force-exit its worker processes.
+const mounted: Renderer[] = [];
+
+afterEach(async () => {
+  await ReactTestRenderer.act(async () => {
+    mounted.splice(0).forEach(renderer => renderer.unmount());
+  });
+});
+
+beforeAll(() => {
+  // Expected noise: the offline fallback and the skipped no-audio items.
+  jest.spyOn(console, 'warn').mockImplementation(() => undefined);
+});
+
 const renderApp = async (): Promise<Renderer> => {
   let renderer: Renderer | undefined;
   await ReactTestRenderer.act(async () => {
@@ -82,6 +105,7 @@ const renderApp = async (): Promise<Renderer> => {
   if (!renderer) {
     throw new Error('App did not render');
   }
+  mounted.push(renderer);
   return renderer;
 };
 
@@ -120,19 +144,42 @@ test('Home and Listening menu defaults', async () => {
   expect(medium.props.accessibilityState).toEqual({ selected: true });
 });
 
-test('Dialogue mode opens with the selected difficulty', async () => {
+test('Home is split into the Listening and Speaking modules', async () => {
+  const renderer = await renderApp();
+  expect(hasText(renderer, 'Dialogues · Numbers · Drops')).toBe(true);
+  expect(hasText(renderer, 'Repeat · Complete Dialogue · AI Q&A')).toBe(true);
+
+  await press(renderer, 'Listening');
+  for (const mode of ['Dialogues', 'Numbers', 'Drops']) {
+    expect(findPressable(renderer, mode)).toBeDefined();
+  }
+});
+
+test.each([
+  ['Repeat (Shadowing)', 'Listen to a phrase, then say it back after the beep.'],
+  ['Complete Dialogue', 'Hear a dialogue with a missing line and say it yourself.'],
+  ['AI Q&A', 'Answer spoken questions in Lithuanian and get feedback.'],
+])('Speaking > %s opens its Coming Soon screen', async (mode, description) => {
+  const renderer = await renderApp();
+  await press(renderer, 'Speaking');
+  await press(renderer, mode);
+  expect(hasText(renderer, 'Coming soon')).toBe(true);
+  expect(hasText(renderer, description)).toBe(true);
+});
+
+test('Dialogues mode opens with the selected difficulty', async () => {
   const difficulty = (['easy', 'medium', 'hard'] as const).find(d => {
-    const result = loadDialogues(d);
+    const result = loadBundledContent('dialogues', d);
     return result.ok && result.exercises.length > 0;
   });
   if (!difficulty) {
     throw new Error('No dialogue content in any difficulty');
   }
-  const result = loadDialogues(difficulty);
+  const result = loadBundledContent('dialogues', difficulty);
   const titles = result.ok ? result.exercises.map(e => e.title) : [];
 
-  const renderer = await openMode('Dialogue', difficulty);
-  expect(hasText(renderer, `Dialogue · ${DIFFICULTY_LABEL[difficulty]}`)).toBe(true);
+  const renderer = await openMode('Dialogues', difficulty);
+  expect(hasText(renderer, `Dialogues · ${DIFFICULTY_LABEL[difficulty]}`)).toBe(true);
   expect(titles.some(title => hasText(renderer, title))).toBe(true);
 });
 
@@ -141,7 +188,7 @@ test('Numbers easy is multiple choice (no text input)', async () => {
   expect(hasText(renderer, 'Numbers · Easy')).toBe(true);
   expect(renderer.root.findAllByType(TextInput)).toHaveLength(0);
 
-  const result = loadNumbers('easy');
+  const result = loadBundledContent('numbers', 'easy');
   const exercise = result.ok ? result.exercises.find(e => e.id === currentNumberId(renderer)) : undefined;
   if (!exercise?.choices) {
     throw new Error('Easy number item without choices');
@@ -159,7 +206,7 @@ test.each(['medium', 'hard'] as const)('Numbers %s uses typed input and checks d
   const renderer = await openMode('Numbers', difficulty);
   expect(renderer.root.findAllByType(TextInput)).toHaveLength(1);
 
-  const result = loadNumbers(difficulty);
+  const result = loadBundledContent('numbers', difficulty);
   const exercise = result.ok ? result.exercises.find(e => e.id === currentNumberId(renderer)) : undefined;
   if (!exercise) {
     throw new Error('Current number item not found in data');
@@ -180,7 +227,7 @@ test('Drops shows the Lithuanian transcript, English on demand, and the timer', 
   const renderer = await openMode('Drops', 'hard');
   expect(hasText(renderer, 'Drops · Hard')).toBe(true);
 
-  const result = loadDrops('hard');
+  const result = loadBundledContent('drops', 'hard');
   const drop = result.ok ? result.exercises.find(e => hasText(renderer, e.title)) : undefined;
   if (!drop) {
     throw new Error('Current drop not found in data');
@@ -204,8 +251,8 @@ test('Drops shows the Lithuanian transcript, English on demand, and the timer', 
   expect(hasText(renderer, drop.lines[0].en)).toBe(true);
 });
 
-test('unimplemented modes open the placeholder screen', async () => {
+test('Credits opens the placeholder screen', async () => {
   const renderer = await renderApp();
-  await press(renderer, 'AI Q&A');
+  await press(renderer, 'Credits & Contribute');
   expect(hasText(renderer, 'Coming soon')).toBe(true);
 });

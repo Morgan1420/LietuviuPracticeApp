@@ -1,12 +1,13 @@
 import React, { useCallback } from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { ActivityIndicator, StyleSheet, Text, View } from 'react-native';
 import { ExerciseLoadResult } from '../data/loadExercises';
 import { ExerciseQueue } from '../hooks/useExerciseQueue';
 import { colors, fontSize, radius, spacing } from '../theme/tokens';
 import { MenuButton } from './MenuButton';
 
 interface ExerciseQueueViewProps<T extends { id: string }> {
-  result: ExerciseLoadResult<T>;
+  /** null while the content is still loading. */
+  result: ExerciseLoadResult<T> | null;
   /** Created by the screen with useExerciseQueue(loadedExercises(result)). */
   queue: ExerciseQueue<T>;
   /** Plural noun for messages, e.g. "dialogues". */
@@ -25,7 +26,7 @@ interface ExerciseQueueViewProps<T extends { id: string }> {
 
 /**
  * Shared shell for listening exercise screens: renders the current item of a
- * (shuffled) queue and handles the error, empty and finished states.
+ * (shuffled) queue and handles the loading, error, empty and finished states.
  */
 export const ExerciseQueueView = <T extends { id: string }>({
   result,
@@ -44,6 +45,15 @@ export const ExerciseQueueView = <T extends { id: string }>({
     restart();
     onRestart?.();
   }, [restart, onRestart]);
+
+  if (result === null) {
+    return (
+      <View style={styles.loading}>
+        <ActivityIndicator color={colors.primary} />
+        <Text style={styles.progress}>Loading {itemsLabel}…</Text>
+      </View>
+    );
+  }
 
   if (!result.ok) {
     return <Text style={styles.message}>Could not load exercises: {result.message}</Text>;
@@ -84,6 +94,11 @@ export const ExerciseQueueView = <T extends { id: string }>({
 };
 
 const styles = StyleSheet.create({
+  loading: {
+    alignItems: 'center',
+    gap: spacing.sm,
+    paddingVertical: spacing.xl,
+  },
   card: {
     gap: spacing.md,
     padding: spacing.lg,
